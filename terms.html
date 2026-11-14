@@ -67,6 +67,10 @@ h2.lt{font-size:clamp(40px,6vw,72px);text-align:center;margin:0 0 34px}
 .soon{display:inline-flex;align-items:center;background:var(--pk);border-bottom:4px solid var(--pk-d);color:#fff;font-weight:800;border-radius:16px;padding:2px 14px 4px;font-size:15px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 section{padding:84px 0}
+/* tabelasız düz metin: mor zemin üstünde krem yazı */
+.txt p{color:#FFF6EA;font-size:20px;line-height:1.6;margin:0 0 14px;text-shadow:0 2px 0 rgba(40,10,90,.35),0 0 14px rgba(60,20,90,.55)}
+.floor .txt p{font-weight:800;text-shadow:0 2px 0 #7A3A10,0 0 10px rgba(90,30,10,.8),0 0 22px rgba(90,30,10,.6)}
+.txt .co{color:#E6D6FF;font-size:15px}.txt a{color:var(--yel)}
 /* hikaye */
 .story{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .story .pn p{font-size:20px}
@@ -82,7 +86,7 @@ section{padding:84px 0}
 .card b{display:block;text-align:center;font:700 28px/1.1 Fredoka,"Baloo 2",sans-serif;color:#C2187A;margin-top:10px}
 .card span{display:block;text-align:center;color:var(--mute);font-size:15px;font-weight:800}
 /* özellikler: mağaza satırları gibi */
-.flist{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flist{display:grid;grid-template-columns:1fr 1fr;gap:16px}.flist .row{box-shadow:0 10px 18px rgba(40,10,90,.3)}
 .flist .row img{width:52px;height:84px;object-fit:contain;flex:none}
 .flist h3{margin:0;font:700 22px/1.15 Fredoka,"Baloo 2",sans-serif;color:var(--ink)}
 .flist p{margin:2px 0 0;color:var(--soft);font-size:16px;line-height:1.4}
@@ -91,16 +95,24 @@ section{padding:84px 0}
 .floor{background:url(img/c/floor.webp) center/cover;position:relative}
 .floor::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#8E4FBF 0,rgba(142,79,191,0) 90px,rgba(142,79,191,0) calc(100% - 90px),#7440B0 100%)}
 .floor>*{position:relative}
-.phone{position:relative;aspect-ratio:9/20;border-radius:44px;background:#16101f;padding:9px;box-shadow:0 0 0 3px #3a2c4f,0 30px 50px rgba(40,10,40,.45)}
-.phone img{width:100%;height:100%;object-fit:cover;border-radius:36px}
-.phone::after{content:"";position:absolute;top:19px;left:50%;transform:translateX(-50%);width:28%;height:20px;background:#16101f;border-radius:99px}
-.phone.and::after{width:11px;height:11px;top:20px}
-.tablet{position:relative;aspect-ratio:3/4;border-radius:32px;background:#16101f;padding:13px;box-shadow:0 0 0 3px #3a2c4f,0 30px 50px rgba(40,10,40,.4)}
-.tablet img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.phone,.tablet{container-type:inline-size}
+.bd{position:relative;width:100%;aspect-ratio:0.482;border-radius:16.5cqw;padding:3.6cqw;background:linear-gradient(145deg,#6a6a73,#1d1d22 28%,#2c2c33 72%,#6a6a73);box-shadow:inset 0 0 0 .7cqw #0b0b0e,0 0 0 .45cqw #85858f,0 3cqw 6cqw rgba(40,10,40,.45)}
+.bd>img{width:100%;height:100%;object-fit:cover;border-radius:12.9cqw;display:block;background:#000}
+.bd::after{content:"";position:absolute;top:6.4cqw;left:50%;transform:translateX(-50%);width:27cqw;height:8cqw;background:#050507;border-radius:99px}
+.bd::before{content:"";position:absolute;right:-1cqw;top:28%;width:1.2cqw;height:14%;background:#55555e;border-radius:0 4px 4px 0}
+.and .bd{aspect-ratio:0.47;border-radius:12cqw;padding:3.3cqw;background:linear-gradient(145deg,#454852,#15161a 30%,#202228 72%,#454852)}
+.and .bd>img{border-radius:9cqw}
+.and .bd::after{width:4.6cqw;height:4.6cqw;top:6.4cqw}
+.tablet .bd{aspect-ratio:0.715;border-radius:6.5cqw;padding:3.4cqw}
+.tablet .bd>img{border-radius:3.6cqw}
+.tablet .bd::after{width:1.6cqw;height:1.6cqw;top:1.1cqw}
+.tablet .bd::before{display:none}
+.tablet.and .bd{aspect-ratio:0.66;border-radius:5cqw;padding:4.4cqw}
+.tablet.and .bd>img{border-radius:2.4cqw}
 .drow{display:flex;justify-content:center;align-items:flex-end;gap:clamp(14px,3vw,40px);flex-wrap:wrap}
 .dev{text-align:center}
 .dev .chip{margin-top:16px}
-.dev.ipad .tablet{width:min(320px,80vw)}.dev.atab .tablet{width:min(280px,72vw)}.dev .phone{width:min(185px,44vw)}
+.dev.ipad .tablet{width:min(330px,80vw)}.dev.atab .tablet{width:min(300px,72vw)}.dev .phone{width:min(205px,44vw)}
 .devtxt{max-width:760px;margin:0 auto 40px;text-align:center}
 .devtxt .pn p{font-size:19px;margin:0}
 .langs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:40px}
@@ -132,8 +144,7 @@ section{padding:84px 0}
 .cta .badges{justify-content:center}
 .about{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center}
 .about .ic{width:140px;border-radius:32px;box-shadow:0 10px 20px rgba(60,20,110,.2)}
-.about .co{font-size:15px;color:var(--mute)}
-.about a{color:#C2187A;font-weight:800}
+.about a{font-weight:800}
 .social{display:flex;gap:10px;margin-top:14px}
 .social a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--chip);border-bottom:5px solid var(--chip-d);color:#fff;transition:transform .1s}
 .social a:active{transform:translateY(3px)}
@@ -165,7 +176,7 @@ footer.f .copy{grid-column:1/-1;border-top:2px solid rgba(255,255,255,.12);paddi
 @media (max-width:620px){
  section{padding:56px 0}h2.lt{margin-bottom:56px}.pn{border-width:24px;border-image-width:26px;padding:6px 4px 10px}.pn.k::after{top:-104px;right:-26px;width:80px;height:160px}.w{width:calc(100% - 20px)}
  .badge img{height:46px}.top .home img{height:40px}.card b{font-size:22px}.card{padding:7px;border-radius:22px}
- .drow{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;align-items:end}.dev .phone{width:100%;max-width:165px;margin:0 auto}.dev.ipad .tablet,.dev.atab .tablet{width:100%;padding:8px;border-radius:20px}.dev .tablet img{border-radius:13px}.dev .chip{font-size:14px;padding:3px 12px 5px}
+ .drow{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;align-items:end}.dev .phone{width:100%;max-width:165px;margin:0 auto}.dev.ipad .tablet,.dev.atab .tablet{width:100%}.dev .chip{font-size:14px;padding:3px 12px 5px}
  .pair{height:420px}.pair .phone{width:175px}.strip .phone{width:185px}.strip .tablet{width:300px}.mode img{height:110px}.crowd{height:260px}
  .flist .row{padding:12px 12px 12px 10px;position:relative;align-items:flex-start}.flist .row>div{padding-inline-end:58px}.flist .row img{width:40px;height:66px}.flist .gb{position:absolute;top:10px;inset-inline-end:10px;min-width:54px;min-height:36px;font-size:15px;padding:2px 10px 5px;border-bottom-width:5px}
  .hero .chips .chip{font-size:14px}.badges{gap:8px}
