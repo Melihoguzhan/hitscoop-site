@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hitscoop — Terms of Use</title>
+<meta name="description" content="Hitscoop Terms of Use">
+<meta name="theme-color" content="#1E0A45">
+<link rel="icon" type="image/png" href="img/favicon.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/Baloo2.ttf" as="font" type="font/ttf" crossorigin>
+<meta property="og:type" content="website"><meta property="og:title" content="Hitscoop"><meta property="og:description" content="Hitscoop Terms of Use">
+<meta property="og:image" content="https://hitscoop.com/img/og.jpg"><meta property="og:url" content="https://hitscoop.com/terms.html"><meta name="twitter:card" content="summary_large_image">
+<style>@font-face{font-family:"Baloo 2";font-weight:400 800;font-display:swap;src:url(fonts/Baloo2.ttf) format("truetype")}
+@font-face{font-family:Fredoka;font-weight:700;font-display:swap;src:url(fonts/Fredoka-Bold.ttf) format("truetype")}
+:root{--or:#F58A07;--or-d:#A84A00;--pu:#6A3DE0;--pu-d:#3A1A94;--bl:#2F86F0;--bl-d:#13489C;--gr:#3FAE26;--gr-d:#1E6512;--pk:#EC4C9C;--pk-d:#9A1F5E;--ink:#2A1A5E;--soft:#5B4B8A;--mute:#7A6AA6;--chip:#4A23A8;--chip-d:#2A1070;--cream:#FFF8EE;--choco:#8A5634;--yel:#FFC928}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;color:var(--ink);font:600 18px/1.55 "Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden;
+ background:radial-gradient(circle at 12% 18%,#FF7AB8 0 5px,transparent 6px) 0 0/180px 180px,radial-gradient(circle at 70% 60%,#FFC928 0 4px,transparent 5px) 0 0/220px 220px,radial-gradient(circle at 40% 85%,#7FE3C4 0 4px,transparent 5px) 0 0/260px 260px,linear-gradient(180deg,#8E4FBF 0%,#7440B0 40%,#5E2E9C 100%)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--yel);outline-offset:3px;border-radius:12px}
+[hidden]{display:none!important}
+.w{width:min(1180px,100% - 32px);margin:0 auto}
+/* logo dili başlık: tombul sarı/krem harf, mor kontur, mor 3B gölge */
+.lt{font-family:Fredoka,"Baloo 2",system-ui,sans-serif;font-weight:700;color:var(--yel);-webkit-text-stroke:.2em #5B2BB5;paint-order:stroke fill;text-shadow:.03em .1em 0 #2E1170,0 .1em 0 #2E1170;letter-spacing:.5px;line-height:1.1;margin:0}
+.lt.crm{color:#FFF6EA}
+h2.lt{font-size:clamp(40px,6vw,72px);text-align:center;margin:0 0 34px}
+/* çikolata çerçeveli krem tabela + köşeye saplanmış külah */
+.pn{position:relative;border:42px solid transparent;border-image:url(img/c/ui-panel.webp) 42 40 fill stretch;padding:4px 6px 14px;filter:drop-shadow(0 14px 18px rgba(40,10,90,.35))}
+.pn.k::after{content:"";position:absolute;top:-142px;right:-50px;width:115px;height:230px;background:url(img/c/ui-panel-kulah.webp) no-repeat center/contain;pointer-events:none}
+.pn p{color:var(--soft);margin:0 0 12px}
+.row{background:var(--cream);border:2px solid var(--choco);border-bottom-width:6px;border-radius:26px;padding:14px 18px;display:flex;align-items:center;gap:16px}
+/* oyun düğmesi: düz renk, kalın koyu alt kenar */
+.gb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:6px 26px 10px;border:0;border-bottom:8px solid var(--or-d);border-radius:26px;background:var(--or);color:#fff;font:800 22px "Baloo 2",system-ui,sans-serif;text-decoration:none;text-shadow:0 2px 0 rgba(0,0,0,.25),0 0 3px rgba(0,0,0,.25);box-shadow:0 6px 10px rgba(40,10,90,.3);cursor:pointer;transition:transform .1s,border-width .1s}
+.gb:active{transform:translateY(5px);border-bottom-width:3px}
+.gb.gr{background:var(--gr);border-color:var(--gr-d)}.gb.bl{background:var(--bl);border-color:var(--bl-d)}.gb.pk{background:var(--pk);border-color:var(--pk-d)}.gb.pu{background:var(--pu);border-color:var(--pu-d)}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border-bottom:5px solid var(--chip-d);border-radius:40px;color:#fff;font-weight:800;padding:4px 18px 6px;font-size:16px;text-decoration:none}
+.chip svg{width:20px;height:20px}
+/* üst bar */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .2s,border-color .2s;border-bottom:5px solid transparent}
+.top.on{background:var(--chip);border-color:var(--chip-d)}
+.top .w{display:flex;align-items:center;gap:10px;height:76px}
+.top .home img{height:50px;width:auto;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.top nav{margin-inline-start:auto;display:flex;align-items:center;gap:8px}
+.top nav .chip{min-height:44px}
+.top.on nav .chip{background:#5B30C2}
+.lang{position:relative;display:inline-flex;background:var(--chip);border-bottom:5px solid var(--chip-d);border-radius:40px}
+.lang select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:800 16px "Baloo 2",system-ui,sans-serif;color:#fff;padding:8px 36px 8px 18px;border-radius:40px;cursor:pointer;min-height:44px}
+.lang select option{color:#222}
+.lang::after{content:"";position:absolute;inset-inline-end:16px;top:50%;width:7px;height:7px;border-right:3px solid #fff;border-bottom:3px solid #fff;transform:translateY(-70%) rotate(45deg);pointer-events:none}
+[dir=rtl] .lang select{padding:8px 18px 8px 36px}
+/* hero: oyunun ana menü odası */
+.hero{position:relative;overflow:hidden;padding:96px 0 40px;background:url(img/c/bg-menu-full.webp) center 22%/cover}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(180deg,transparent,#8E4FBF)}
+.hero .w{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;min-height:min(780px,90vh)}
+.menu{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center}
+.menu .logo{width:min(520px,96%);filter:drop-shadow(0 16px 30px rgba(60,20,110,.45))}
+.menu .who{position:relative;height:min(470px,48vh);width:100%;margin-top:-10px}
+.menu .who img{position:absolute;left:50%;bottom:0;height:100%;width:auto;max-width:none;transform:translateX(-50%);opacity:0;transition:opacity .6s;filter:drop-shadow(0 18px 20px rgba(60,20,40,.35))}
+.menu .who img.on{opacity:1}
+.hero .pn{margin-bottom:30px}
+.hero h1{margin:0 0 8px;font-size:clamp(30px,3.6vw,46px);line-height:1.05;color:var(--ink);font-weight:800}
+.hero .kick{display:inline-block;background:var(--pk);border-bottom:4px solid var(--pk-d);color:#fff;border-radius:16px;padding:0 14px 2px;font-weight:800;font-size:15px;margin-bottom:10px}
+.badges{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.badge{display:block;border-radius:12px}
+.badge img{height:54px;width:auto}
+.soon{display:inline-flex;align-items:center;background:var(--pk);border-bottom:4px solid var(--pk-d);color:#fff;font-weight:800;border-radius:16px;padding:2px 14px 4px;font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+section{padding:84px 0}
+/* hikaye */
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.story .pn p{font-size:20px}
+.crowd{position:relative;height:440px}
+.crowd img{position:absolute;bottom:0;height:var(--h);width:auto;max-width:none;filter:drop-shadow(0 14px 14px rgba(30,10,60,.35))}
+/* hedef kartları: oyundaki "Hedefini Seç" kartları */
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--cream);border:3px solid var(--choco);border-bottom-width:8px;border-radius:28px;padding:10px;transition:transform .15s;box-shadow:0 10px 18px rgba(40,10,90,.3)}
+.card:hover{transform:translateY(-5px) rotate(-.6deg)}
+.card .pic{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/3.6;background:#ddd}
+.card .pic .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .pic .ch{position:absolute;left:50%;bottom:-4%;height:96%;width:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
+.card b{display:block;text-align:center;font:700 28px/1.1 Fredoka,"Baloo 2",sans-serif;color:#C2187A;margin-top:10px}
+.card span{display:block;text-align:center;color:var(--mute);font-size:15px;font-weight:800}
+/* özellikler: mağaza satırları gibi */
+.flist{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flist .row img{width:52px;height:84px;object-fit:contain;flex:none}
+.flist h3{margin:0;font:700 22px/1.15 Fredoka,"Baloo 2",sans-serif;color:var(--ink)}
+.flist p{margin:2px 0 0;color:var(--soft);font-size:16px;line-height:1.4}
+.flist .gb{margin-inline-start:auto;flex:none;min-width:86px;min-height:46px;font-size:20px;padding:4px 14px 8px;pointer-events:none}
+/* zemin bandı: menü odasının ahşap zemini */
+.floor{background:url(img/c/floor.webp) center/cover;position:relative}
+.floor::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#8E4FBF 0,rgba(142,79,191,0) 90px,rgba(142,79,191,0) calc(100% - 90px),#7440B0 100%)}
+.floor>*{position:relative}
+.phone{position:relative;aspect-ratio:9/20;border-radius:44px;background:#16101f;padding:9px;box-shadow:0 0 0 3px #3a2c4f,0 30px 50px rgba(40,10,40,.45)}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:36px}
+.phone::after{content:"";position:absolute;top:19px;left:50%;transform:translateX(-50%);width:28%;height:20px;background:#16101f;border-radius:99px}
+.phone.and::after{width:11px;height:11px;top:20px}
+.tablet{position:relative;aspect-ratio:3/4;border-radius:32px;background:#16101f;padding:13px;box-shadow:0 0 0 3px #3a2c4f,0 30px 50px rgba(40,10,40,.4)}
+.tablet img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.drow{display:flex;justify-content:center;align-items:flex-end;gap:clamp(14px,3vw,40px);flex-wrap:wrap}
+.dev{text-align:center}
+.dev .chip{margin-top:16px}
+.dev.ipad .tablet{width:min(320px,80vw)}.dev.atab .tablet{width:min(280px,72vw)}.dev .phone{width:min(185px,44vw)}
+.devtxt{max-width:760px;margin:0 auto 40px;text-align:center}
+.devtxt .pn p{font-size:19px;margin:0}
+.langs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:40px}
+.langs span{background:var(--cream);border:2px solid var(--choco);border-bottom-width:5px;border-radius:99px;padding:2px 14px 3px;font-size:15px;font-weight:800;color:var(--ink)}
+/* galeri */
+.strip{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px max(16px,calc((100% - 1180px)/2)) 30px;scrollbar-width:thin;scrollbar-color:var(--or) transparent}
+.strip .phone{flex:none;width:220px;scroll-snap-align:center}
+.strip .tablet{flex:none;width:390px;scroll-snap-align:center;align-self:center}
+.gnav{display:flex;gap:14px;justify-content:center}
+.gnav .gb{width:64px;padding:0 0 6px}
+.gnav svg{width:24px;height:24px}
+/* iki kişilik: oyundaki mod seçim penceresi */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.mode{border-radius:26px;border-bottom:8px solid;color:#fff;text-align:center;padding:14px 10px 12px;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+.mode img{height:150px;width:auto;margin:0 auto 6px}
+.mode b{display:block;font:700 26px Fredoka,"Baloo 2",sans-serif}
+.mode span{font-size:14px;font-weight:800;opacity:.95}
+.mode.o{background:var(--or);border-color:var(--or-d)}.mode.b{background:var(--bl);border-color:var(--bl-d)}
+.pair{position:relative;height:540px}
+.pair .phone{position:absolute;width:240px}
+.pair .a{inset-inline-start:4%;top:0;transform:rotate(-6deg)}.pair .b{inset-inline-end:4%;top:50px;transform:rotate(6deg)}
+.vs{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);z-index:5;font-size:84px}
+/* indir + hakkımızda */
+.cta{text-align:center}
+.cta .pn{max-width:720px;margin:0 auto}
+.cta .icon{width:132px;border-radius:30px;margin:0 auto 10px;box-shadow:0 10px 20px rgba(60,20,110,.25)}
+.cta h3{font:700 34px Fredoka,"Baloo 2",sans-serif;margin:0 0 4px;color:var(--ink)}
+.cta .badges{justify-content:center}
+.about{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center}
+.about .ic{width:140px;border-radius:32px;box-shadow:0 10px 20px rgba(60,20,110,.2)}
+.about .co{font-size:15px;color:var(--mute)}
+.about a{color:#C2187A;font-weight:800}
+.social{display:flex;gap:10px;margin-top:14px}
+.social a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--chip);border-bottom:5px solid var(--chip-d);color:#fff;transition:transform .1s}
+.social a:active{transform:translateY(3px)}
+.social svg{width:22px;height:22px}
+footer.f{background:var(--chip-d);color:#CBBDF0;padding:48px 0 36px;font-size:16px;margin-top:40px}
+footer.f .w{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;align-items:start}
+footer.f img.fl{height:62px;width:auto;margin-bottom:10px}
+footer.f a{color:#fff;text-decoration:none;font-weight:800}
+footer.f ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer.f .social a{background:#5B30C2;border-color:#1E0A55}
+footer.f .badge img{height:46px}
+footer.f .copy{grid-column:1/-1;border-top:2px solid rgba(255,255,255,.12);padding-top:18px;font-size:14px}
+/* hukuk sayfaları */
+.doc{padding:110px 0 30px}
+.doc .w{width:min(900px,100% - 24px)}
+.doc h1{font:700 clamp(34px,5vw,48px)/1.1 Fredoka,"Baloo 2",sans-serif;margin:0 0 4px;color:var(--ink)}
+.doc h2{font:700 24px/1.2 Fredoka,"Baloo 2",sans-serif;margin:26px 0 4px;color:var(--ink)}
+.doc p,.doc li{color:var(--soft)} .doc ul{padding-inline-start:22px}
+.doc .date{font-size:15px;color:var(--mute)}
+.doc a{color:#C2187A;font-weight:800}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media (max-width:980px){
+ .hero .w{grid-template-columns:1fr;min-height:0}.menu .who{height:min(380px,44vh)}
+ .story,.two{grid-template-columns:1fr}.cgrid{grid-template-columns:repeat(2,1fr)}.flist{grid-template-columns:1fr}
+ .about{grid-template-columns:1fr;text-align:center}.about .ic{margin:0 auto}.about .social{justify-content:center}
+ footer.f .w{grid-template-columns:1fr}.top nav a.nl{display:none}.crowd{height:340px}
+}
+@media (max-width:620px){
+ section{padding:56px 0}h2.lt{margin-bottom:56px}.pn{border-width:24px;border-image-width:26px;padding:6px 4px 10px}.pn.k::after{top:-104px;right:-26px;width:80px;height:160px}.w{width:calc(100% - 20px)}
+ .badge img{height:46px}.top .home img{height:40px}.card b{font-size:22px}.card{padding:7px;border-radius:22px}
+ .drow{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;align-items:end}.dev .phone{width:100%;max-width:165px;margin:0 auto}.dev.ipad .tablet,.dev.atab .tablet{width:100%;padding:8px;border-radius:20px}.dev .tablet img{border-radius:13px}.dev .chip{font-size:14px;padding:3px 12px 5px}
+ .pair{height:420px}.pair .phone{width:175px}.strip .phone{width:185px}.strip .tablet{width:300px}.mode img{height:110px}.crowd{height:260px}
+ .flist .row{padding:12px 12px 12px 10px;position:relative;align-items:flex-start}.flist .row>div{padding-inline-end:58px}.flist .row img{width:40px;height:66px}.flist .gb{position:absolute;top:10px;inset-inline-end:10px;min-width:54px;min-height:36px;font-size:15px;padding:2px 10px 5px;border-bottom-width:5px}
+ .hero .chips .chip{font-size:14px}.badges{gap:8px}
+}
+</style>
+</head>
+<body>
+<header class="top on" id="top"><div class="w"><a class="home" href="./" aria-label="Hitscoop"><img src="img/logo-hd.webp" alt="Hitscoop" width="1400" height="715"></a><nav><a class="chip nl" href="./#game" data-k="nav_game">The game</a><a class="chip nl" href="./#characters" data-k="nav_chars">Characters</a><a class="chip nl" href="./#about" data-k="nav_about">About us</a><label class="lang"><select id="langSel" aria-label="Language"><option value="en">English</option><option value="tr">Türkçe</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="pt">Português</option><option value="it">Italiano</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Română</option><option value="sq">Shqip</option><option value="id">Bahasa Indonesia</option><option value="ru">Русский</option><option value="uk">Українська</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh">简体中文</option><option value="ar">العربية</option></select></label></nav></div></header>
+<main class="doc"><div class="w"><div class="pn"><article data-lang="en" lang="en">
+<h1>Terms of Use</h1>
+<p class="date">Last updated: 14 November 2026</p>
+<h2>Using the game</h2>
+<p>You may use Hitscoop personally, for fun. Do not copy, resell or modify the game or use it for unlawful purposes.</p>
+<h2>Characters</h2>
+<p>The characters and stories in the game are fictional and have nothing to do with real people.</p>
+<h2>Scoops and items</h2>
+<p>Scoops and special ice creams are in-game items only. They have no real money value and cannot be sold, transferred or exchanged for money.</p>
+<h2>Ads</h2>
+<p>The game contains ads from Google AdMob. Watching rewarded ads is always optional.</p>
+<h2>As is</h2>
+<p>The game is provided as is. Swiff Studio may update or change the game or remove parts of it. To the extent permitted by law, Swiff Studio is not liable for indirect damages arising from use of the game. Your statutory rights are not affected.</p>
+<h2>Contact</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="tr" lang="tr">
+<h1>Kullanım Koşulları</h1>
+<p class="date">Son güncelleme: 14 Kasım 2026</p>
+<h2>Oyunu kullanmak</h2>
+<p>Hitscoop'u eğlence için kişisel olarak kullanabilirsin. Oyunu kopyalama, yeniden satma, değiştirme ya da hukuka aykırı amaçlarla kullanma.</p>
+<h2>Karakterler</h2>
+<p>Oyundaki karakterler ve hikâyeler kurgusaldır; gerçek kişilerle ilgisi yoktur.</p>
+<h2>Scoop ve öğeler</h2>
+<p>Scoop ve özel dondurmalar yalnızca oyun içi öğelerdir. Gerçek para değerleri yoktur; satılamaz, devredilemez ve paraya çevrilemez.</p>
+<h2>Reklamlar</h2>
+<p>Oyunda Google AdMob reklamları bulunur. Ödüllü reklam izlemek her zaman isteğe bağlıdır.</p>
+<h2>Olduğu gibi</h2>
+<p>Oyun olduğu gibi sunulur. Swiff Studio oyunu güncelleyebilir, değiştirebilir ya da bir bölümünü kaldırabilir. Yasaların izin verdiği ölçüde Swiff Studio, oyunun kullanımından doğan dolaylı zararlardan sorumlu değildir. Yasal hakların saklıdır.</p>
+<h2>İletişim</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="de" lang="de">
+<h1>Nutzungsbedingungen</h1>
+<p class="date">Zuletzt aktualisiert: 14. November 2026</p>
+<h2>Nutzung des Spiels</h2>
+<p>Du darfst Hitscoop privat zum Spaß nutzen. Kopiere, verkaufe oder verändere das Spiel nicht und nutze es nicht für rechtswidrige Zwecke.</p>
+<h2>Figuren</h2>
+<p>Die Figuren und Geschichten im Spiel sind erfunden und haben nichts mit echten Personen zu tun.</p>
+<h2>Scoops und Gegenstände</h2>
+<p>Scoops und Spezial-Eis sind reine Spielinhalte. Sie haben keinen Geldwert und können weder verkauft, übertragen noch in Geld getauscht werden.</p>
+<h2>Werbung</h2>
+<p>Das Spiel enthält Werbung von Google AdMob. Belohnte Werbung anzusehen ist immer freiwillig.</p>
+<h2>Bereitstellung</h2>
+<p>Das Spiel wird so bereitgestellt, wie es ist. Swiff Studio kann das Spiel aktualisieren, ändern oder Teile davon entfernen. Soweit gesetzlich zulässig, haftet Swiff Studio nicht für mittelbare Schäden aus der Nutzung des Spiels. Deine gesetzlichen Rechte bleiben unberührt.</p>
+<h2>Kontakt</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="fr" lang="fr">
+<h1>Conditions d&#x27;utilisation</h1>
+<p class="date">Dernière mise à jour : 14 novembre 2026</p>
+<h2>Utilisation du jeu</h2>
+<p>Tu peux utiliser Hitscoop à titre personnel, pour t'amuser. Ne copie pas, ne revends pas et ne modifie pas le jeu, et ne l'utilise pas à des fins illicites.</p>
+<h2>Personnages</h2>
+<p>Les personnages et histoires du jeu sont fictifs et n'ont aucun lien avec des personnes réelles.</p>
+<h2>Scoops et objets</h2>
+<p>Les Scoops et les glaces spéciales sont uniquement des objets du jeu. Ils n'ont aucune valeur en argent réel et ne peuvent être ni vendus, ni transférés, ni échangés contre de l'argent.</p>
+<h2>Publicités</h2>
+<p>Le jeu contient des publicités Google AdMob. Regarder une publicité récompensée est toujours facultatif.</p>
+<h2>Tel quel</h2>
+<p>Le jeu est fourni tel quel. Swiff Studio peut le mettre à jour, le modifier ou en retirer une partie. Dans la mesure permise par la loi, Swiff Studio n'est pas responsable des dommages indirects liés à l'utilisation du jeu. Tes droits légaux ne sont pas affectés.</p>
+<h2>Contact</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="es" lang="es">
+<h1>Condiciones de uso</h1>
+<p class="date">Última actualización: 14 de noviembre de 2026</p>
+<h2>Uso del juego</h2>
+<p>Puedes usar Hitscoop de forma personal, para divertirte. No copies, revendas ni modifiques el juego, ni lo uses con fines ilícitos.</p>
+<h2>Personajes</h2>
+<p>Los personajes y las historias del juego son ficticios y no tienen relación con personas reales.</p>
+<h2>Scoops y objetos</h2>
+<p>Los Scoops y los helados especiales son solo objetos del juego. No tienen valor en dinero real y no se pueden vender, transferir ni cambiar por dinero.</p>
+<h2>Anuncios</h2>
+<p>El juego contiene anuncios de Google AdMob. Ver anuncios con recompensa siempre es opcional.</p>
+<h2>Tal cual</h2>
+<p>El juego se ofrece tal cual. Swiff Studio puede actualizarlo, cambiarlo o retirar partes de él. En la medida en que la ley lo permita, Swiff Studio no responde de daños indirectos derivados del uso del juego. Tus derechos legales no se ven afectados.</p>
+<h2>Contacto</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="pt" lang="pt">
+<h1>Termos de uso</h1>
+<p class="date">Última atualização: 14 de novembro de 2026</p>
+<h2>Uso do jogo</h2>
+<p>Você pode usar o Hitscoop de forma pessoal, para se divertir. Não copie, revenda ou modifique o jogo, nem o use para fins ilegais.</p>
+<h2>Personagens</h2>
+<p>Os personagens e as histórias do jogo são fictícios e não têm relação com pessoas reais.</p>
+<h2>Scoops e itens</h2>
+<p>Scoops e sorvetes especiais são apenas itens do jogo. Não têm valor em dinheiro real e não podem ser vendidos, transferidos ou trocados por dinheiro.</p>
+<h2>Anúncios</h2>
+<p>O jogo contém anúncios do Google AdMob. Assistir a anúncios com recompensa é sempre opcional.</p>
+<h2>Como está</h2>
+<p>O jogo é oferecido como está. A Swiff Studio pode atualizar, alterar ou remover partes do jogo. Na medida permitida por lei, a Swiff Studio não se responsabiliza por danos indiretos decorrentes do uso do jogo. Seus direitos legais não são afetados.</p>
+<h2>Contato</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="it" lang="it">
+<h1>Termini d&#x27;uso</h1>
+<p class="date">Ultimo aggiornamento: 14 novembre 2026</p>
+<h2>Uso del gioco</h2>
+<p>Puoi usare Hitscoop a titolo personale, per divertirti. Non copiare, rivendere o modificare il gioco e non usarlo per scopi illeciti.</p>
+<h2>Personaggi</h2>
+<p>I personaggi e le storie del gioco sono immaginari e non hanno nulla a che fare con persone reali.</p>
+<h2>Scoop e oggetti</h2>
+<p>Gli Scoop e i gelati speciali sono solo oggetti di gioco. Non hanno valore in denaro reale e non possono essere venduti, trasferiti o convertiti in denaro.</p>
+<h2>Pubblicità</h2>
+<p>Il gioco contiene pubblicità di Google AdMob. Guardare annunci con premio è sempre facoltativo.</p>
+<h2>Così com&#x27;è</h2>
+<p>Il gioco è fornito così com'è. Swiff Studio può aggiornarlo, modificarlo o rimuoverne delle parti. Nei limiti consentiti dalla legge, Swiff Studio non è responsabile dei danni indiretti derivanti dall'uso del gioco. I tuoi diritti di legge restano invariati.</p>
+<h2>Contatti</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="nl" lang="nl">
+<h1>Gebruiksvoorwaarden</h1>
+<p class="date">Laatst bijgewerkt: 14 november 2026</p>
+<h2>Gebruik van het spel</h2>
+<p>Je mag Hitscoop persoonlijk gebruiken, voor je plezier. Kopieer, verkoop of wijzig het spel niet en gebruik het niet voor onwettige doeleinden.</p>
+<h2>Personages</h2>
+<p>De personages en verhalen in het spel zijn verzonnen en hebben niets met echte mensen te maken.</p>
+<h2>Scoops en items</h2>
+<p>Scoops en speciale ijsjes zijn alleen spelitems. Ze hebben geen waarde in echt geld en kunnen niet verkocht, overgedragen of voor geld geruild worden.</p>
+<h2>Advertenties</h2>
+<p>Het spel bevat advertenties van Google AdMob. Beloonde advertenties bekijken is altijd vrijwillig.</p>
+<h2>Zoals het is</h2>
+<p>Het spel wordt aangeboden zoals het is. Swiff Studio kan het bijwerken, wijzigen of onderdelen verwijderen. Voor zover de wet het toestaat, is Swiff Studio niet aansprakelijk voor indirecte schade door het gebruik van het spel. Je wettelijke rechten blijven onaangetast.</p>
+<h2>Contact</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="pl" lang="pl">
+<h1>Warunki korzystania</h1>
+<p class="date">Ostatnia aktualizacja: 14 listopada 2026</p>
+<h2>Korzystanie z gry</h2>
+<p>Możesz korzystać z Hitscoop prywatnie, dla zabawy. Nie kopiuj, nie odsprzedawaj i nie modyfikuj gry ani nie używaj jej niezgodnie z prawem.</p>
+<h2>Postacie</h2>
+<p>Postacie i historie w grze są fikcyjne i nie mają nic wspólnego z prawdziwymi osobami.</p>
+<h2>Scoopy i przedmioty</h2>
+<p>Scoopy i specjalne lody to wyłącznie przedmioty w grze. Nie mają wartości w prawdziwych pieniądzach i nie można ich sprzedać, przekazać ani wymienić na pieniądze.</p>
+<h2>Reklamy</h2>
+<p>Gra zawiera reklamy Google AdMob. Oglądanie reklam z nagrodą jest zawsze dobrowolne.</p>
+<h2>W obecnej postaci</h2>
+<p>Gra jest udostępniana w obecnej postaci. Swiff Studio może ją aktualizować, zmieniać lub usuwać jej części. W zakresie dozwolonym przez prawo Swiff Studio nie odpowiada za szkody pośrednie wynikające z korzystania z gry. Twoje ustawowe prawa pozostają nienaruszone.</p>
+<h2>Kontakt</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="ro" lang="ro">
+<h1>Termeni de utilizare</h1>
+<p class="date">Ultima actualizare: 14 noiembrie 2026</p>
+<h2>Folosirea jocului</h2>
+<p>Poți folosi Hitscoop în scop personal, pentru distracție. Nu copia, nu revinde și nu modifica jocul și nu îl folosi în scopuri ilegale.</p>
+<h2>Personaje</h2>
+<p>Personajele și poveștile din joc sunt fictive și nu au legătură cu persoane reale.</p>
+<h2>Scoop-uri și obiecte</h2>
+<p>Scoop-urile și înghețatele speciale sunt doar obiecte din joc. Nu au valoare în bani reali și nu pot fi vândute, transferate sau schimbate pe bani.</p>
+<h2>Reclame</h2>
+<p>Jocul conține reclame Google AdMob. Vizionarea reclamelor cu recompensă este întotdeauna opțională.</p>
+<h2>Așa cum este</h2>
+<p>Jocul este oferit așa cum este. Swiff Studio îl poate actualiza, modifica sau poate elimina părți din el. În măsura permisă de lege, Swiff Studio nu răspunde pentru daune indirecte rezultate din folosirea jocului. Drepturile tale legale nu sunt afectate.</p>
+<h2>Contact</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="sq" lang="sq">
+<h1>Kushtet e përdorimit</h1>
+<p class="date">Përditësuar më: 14 nëntor 2026</p>
+<h2>Përdorimi i lojës</h2>
+<p>Mund ta përdorësh Hitscoop për qëllime personale, për argëtim. Mos e kopjo, rishit apo ndrysho lojën dhe mos e përdor për qëllime të paligjshme.</p>
+<h2>Personazhet</h2>
+<p>Personazhet dhe historitë në lojë janë të trilluara dhe nuk kanë lidhje me njerëz të vërtetë.</p>
+<h2>Scoop-et dhe sendet</h2>
+<p>Scoop-et dhe akulloret speciale janë vetëm sende brenda lojës. Nuk kanë vlerë në para të vërteta dhe nuk mund të shiten, transferohen apo këmbehen me para.</p>
+<h2>Reklamat</h2>
+<p>Loja përmban reklama Google AdMob. Shikimi i reklamave me shpërblim është gjithmonë me dëshirë.</p>
+<h2>Ashtu siç është</h2>
+<p>Loja ofrohet ashtu siç është. Swiff Studio mund ta përditësojë, ndryshojë ose të heqë pjesë prej saj. Për aq sa e lejon ligji, Swiff Studio nuk mban përgjegjësi për dëme të tërthorta nga përdorimi i lojës. Të drejtat e tua ligjore nuk preken.</p>
+<h2>Kontakti</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="id" lang="id">
+<h1>Ketentuan Penggunaan</h1>
+<p class="date">Terakhir diperbarui: 14 November 2026</p>
+<h2>Menggunakan game</h2>
+<p>Kamu boleh memakai Hitscoop secara pribadi, untuk bersenang-senang. Jangan menyalin, menjual kembali, atau mengubah game, dan jangan memakainya untuk tujuan melanggar hukum.</p>
+<h2>Karakter</h2>
+<p>Karakter dan cerita dalam game ini fiksi dan tidak berkaitan dengan orang sungguhan.</p>
+<h2>Scoop dan item</h2>
+<p>Scoop dan es krim spesial hanyalah item dalam game. Tidak bernilai uang sungguhan dan tidak bisa dijual, dipindahkan, atau ditukar dengan uang.</p>
+<h2>Iklan</h2>
+<p>Game ini berisi iklan Google AdMob. Menonton iklan berhadiah selalu opsional.</p>
+<h2>Apa adanya</h2>
+<p>Game ini disediakan apa adanya. Swiff Studio dapat memperbarui, mengubah, atau menghapus sebagian game. Sejauh diizinkan hukum, Swiff Studio tidak bertanggung jawab atas kerugian tidak langsung dari penggunaan game. Hak hukummu tetap berlaku.</p>
+<h2>Kontak</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="ru" lang="ru">
+<h1>Условия использования</h1>
+<p class="date">Последнее обновление: 14 ноября 2026 г.</p>
+<h2>Использование игры</h2>
+<p>Ты можешь пользоваться Hitscoop лично, для развлечения. Не копируй, не перепродавай и не изменяй игру и не используй её в незаконных целях.</p>
+<h2>Персонажи</h2>
+<p>Персонажи и истории в игре вымышлены и не имеют отношения к реальным людям.</p>
+<h2>Scoop и предметы</h2>
+<p>Scoop и особое мороженое — только игровые предметы. Они не имеют денежной ценности, их нельзя продать, передать или обменять на деньги.</p>
+<h2>Реклама</h2>
+<p>В игре есть реклама Google AdMob. Просмотр рекламы с наградой всегда добровольный.</p>
+<h2>«Как есть»</h2>
+<p>Игра предоставляется «как есть». Swiff Studio может обновлять и изменять игру или удалять её части. В пределах, допустимых законом, Swiff Studio не несёт ответственности за косвенный ущерб от использования игры. Твои законные права не затрагиваются.</p>
+<h2>Контакты</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="uk" lang="uk">
+<h1>Умови використання</h1>
+<p class="date">Останнє оновлення: 14 листопада 2026 р.</p>
+<h2>Використання гри</h2>
+<p>Ти можеш користуватися Hitscoop особисто, для розваги. Не копіюй, не перепродавай і не змінюй гру та не використовуй її в незаконних цілях.</p>
+<h2>Персонажі</h2>
+<p>Персонажі та історії в грі вигадані й не мають стосунку до реальних людей.</p>
+<h2>Scoop і предмети</h2>
+<p>Scoop і особливе морозиво — лише ігрові предмети. Вони не мають грошової цінності, їх не можна продати, передати чи обміняти на гроші.</p>
+<h2>Реклама</h2>
+<p>У грі є реклама Google AdMob. Перегляд реклами з нагородою завжди добровільний.</p>
+<h2>«Як є»</h2>
+<p>Гра надається «як є». Swiff Studio може оновлювати й змінювати гру або вилучати її частини. У межах, дозволених законом, Swiff Studio не відповідає за непрямі збитки від використання гри. Твої законні права не порушуються.</p>
+<h2>Контакти</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="ja" lang="ja">
+<h1>利用規約</h1>
+<p class="date">最終更新日：2026年11月14日</p>
+<h2>ゲームの利用</h2>
+<p>Hitscoop は個人で楽しむために利用できます。ゲームを複製・転売・改変したり、違法な目的で使用したりしないでください。</p>
+<h2>キャラクター</h2>
+<p>ゲームに登場するキャラクターや物語はフィクションであり、実在の人物とは関係ありません。</p>
+<h2>Scoop とアイテム</h2>
+<p>Scoop や特別なアイスはゲーム内アイテムにすぎません。現実のお金としての価値はなく、売却・譲渡・換金はできません。</p>
+<h2>広告</h2>
+<p>ゲームには Google AdMob の広告が含まれます。リワード広告の視聴は常に任意です。</p>
+<h2>現状のまま</h2>
+<p>ゲームは現状のまま提供されます。Swiff Studio はゲームの更新・変更や一部の削除を行うことがあります。法律で認められる範囲で、Swiff Studio はゲームの利用による間接的な損害について責任を負いません。法律上のあなたの権利は影響を受けません。</p>
+<h2>お問い合わせ</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="ko" lang="ko">
+<h1>이용약관</h1>
+<p class="date">최종 업데이트: 2026년 11월 14일</p>
+<h2>게임 이용</h2>
+<p>Hitscoop은 개인적으로 재미를 위해 이용할 수 있습니다. 게임을 복제·재판매·수정하거나 불법적인 목적으로 사용하지 마세요.</p>
+<h2>캐릭터</h2>
+<p>게임 속 캐릭터와 이야기는 허구이며 실제 인물과 관련이 없습니다.</p>
+<h2>Scoop과 아이템</h2>
+<p>Scoop과 특별 아이스크림은 게임 내 아이템일 뿐입니다. 실제 금전적 가치가 없으며 판매·양도하거나 현금으로 바꿀 수 없습니다.</p>
+<h2>광고</h2>
+<p>게임에는 Google AdMob 광고가 포함됩니다. 보상형 광고 시청은 언제나 선택 사항입니다.</p>
+<h2>있는 그대로</h2>
+<p>게임은 있는 그대로 제공됩니다. Swiff Studio는 게임을 업데이트·변경하거나 일부를 삭제할 수 있습니다. 법이 허용하는 범위에서 Swiff Studio는 게임 이용으로 인한 간접 손해에 책임지지 않습니다. 법적 권리는 영향을 받지 않습니다.</p>
+<h2>문의</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="zh" lang="zh">
+<h1>使用条款</h1>
+<p class="date">最后更新：2026年11月14日</p>
+<h2>使用游戏</h2>
+<p>你可以出于个人娱乐使用 Hitscoop。请勿复制、转售或修改游戏，也不得将其用于非法目的。</p>
+<h2>角色</h2>
+<p>游戏中的角色和故事均为虚构，与真实人物无关。</p>
+<h2>Scoop 与物品</h2>
+<p>Scoop 和特殊冰淇淋只是游戏内物品，没有真实货币价值，不能出售、转让或兑换成钱。</p>
+<h2>广告</h2>
+<p>游戏包含 Google AdMob 广告。观看激励广告始终是自愿的。</p>
+<h2>按现状提供</h2>
+<p>游戏按现状提供。Swiff Studio 可以更新、修改游戏或移除部分内容。在法律允许的范围内，Swiff Studio 不对使用游戏产生的间接损失承担责任。你的法定权利不受影响。</p>
+<h2>联系方式</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+<article data-lang="ar" lang="ar" dir=rtl>
+<h1>شروط الاستخدام</h1>
+<p class="date">آخر تحديث: 14 نوفمبر 2026</p>
+<h2>استخدام اللعبة</h2>
+<p>يمكنك استخدام Hitscoop استخدامًا شخصيًا للتسلية. لا تنسخ اللعبة أو تعيد بيعها أو تعدّلها، ولا تستخدمها لأغراض غير قانونية.</p>
+<h2>الشخصيات</h2>
+<p>الشخصيات والقصص في اللعبة خيالية ولا علاقة لها بأشخاص حقيقيين.</p>
+<h2>Scoop والعناصر</h2>
+<p>Scoop والآيس كريم الخاص عناصر داخل اللعبة فقط، ليس لها قيمة مالية حقيقية ولا يمكن بيعها أو نقلها أو استبدالها بالمال.</p>
+<h2>الإعلانات</h2>
+<p>تحتوي اللعبة على إعلانات Google AdMob. مشاهدة الإعلانات ذات المكافأة اختيارية دائمًا.</p>
+<h2>كما هي</h2>
+<p>تُقدَّم اللعبة كما هي. يجوز لـ Swiff Studio تحديث اللعبة أو تغييرها أو إزالة أجزاء منها. في الحدود التي يسمح بها القانون، لا تتحمّل Swiff Studio مسؤولية الأضرار غير المباشرة الناتجة عن استخدام اللعبة. حقوقك القانونية لا تتأثر.</p>
+<h2>التواصل</h2>
+<p><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
+</article>
+</div></div></main>
+<footer class="f"><div class="w">
+<div><img class="fl" src="img/logo-hd.webp" alt="Hitscoop" width="1400" height="715" loading="lazy"><div><span data-k="tag">Fling ice cream at everyone who ever annoyed you!</span></div><div class="social "><a href="https://www.instagram.com/hitscoop/" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a><a href="https://www.tiktok.com/@hitscoop" aria-label="TikTok" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.8l-1-.1z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61596325571323" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a></div></div>
+<div><ul><li><a href="./#game" data-k="nav_game">The game</a></li><li><a href="./#characters" data-k="nav_chars">Characters</a></li><li><a href="./#about" data-k="nav_about">About us</a></li><li><a href="privacy.html" data-k="nav_priv">Privacy</a></li><li><a href="terms.html" data-k="nav_terms">Terms</a></li><li><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li></ul></div>
+<div><div class="badges"><a class="badge" aria-label="App Store"><img src="badges/appstore.svg" alt="Download on the App Store" width="160" height="53"></a><a class="badge gp" aria-label="Google Play"><img data-gp src="badges/gp-en.svg" alt="Get it on Google Play" width="180" height="53"></a><span class="soon" data-k="soon">Coming soon</span></div></div>
+<div class="copy">© 2026 Swiff Studio · SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LTD. ŞTİ. · İstanbul</div>
+</div></footer>
+<script>
+const M={"en": {"nav_game": "The game", "nav_chars": "Characters", "nav_about": "About us", "kicker": "The ice-cream revenge party game", "dev_title": "Play anywhere", "dev_desc": "Made for iPhone, iPad, Android phones and tablets. Every screen fills your device perfectly — big tablet or small phone.", "dev_phone": "Android phone", "dev_tab": "Android tablet", "story_title": "Our story", "story_p1": "Everyone has someone: the boss who takes the credit, the classmate who never stops laughing, the teacher who loves surprise quizzes.", "story_p2": "Our hero has no face and no name — because the hero is you. Armed with a slingshot and a freezer full of ice cream, you take your sweet, harmless revenge, one splat at a time.", "chars_title": "Meet the targets", "chars_desc": "Eight characters, eight worlds — each one dodges, hides and fights back in their own way.", "r_ofisci": "Office worker", "r_patron": "The boss", "r_gelin": "The bride", "r_liseli": "High-schooler", "r_kantin": "Canteen queen", "r_profesor": "Professor", "r_hoca": "Lecturer", "r_noel": "Fake mall Santa", "feat_title": "Why players love it", "f1t": "Aim for the forehead", "f1d": "Pull, aim, release. A dead-center hit scores big and feels even better.", "f2t": "Special ice creams", "f2d": "Choco Bomb, Freezer, Rainbow Split, Homing Vanilla — every flavour has a power.", "f3t": "Scoop Scope gadgets", "f3d": "Cone Laser, Scoopbow, Scoopapult: wild new ways to launch your scoop.", "f4t": "Two Scoop", "f4d": "One phone, two players. Take turns and find out who's the best shot.", "f5t": "40 levels, 8 worlds", "f5d": "Office, wedding, classroom, canteen, university and a very suspicious Christmas.", "f6t": "Fair and free", "f6d": "Free to play. Ads only appear when you choose to watch one for a reward.", "shots_title": "See it in action", "shots_desc": "Real screens from the game on phone and tablet.", "two_title": "Two Scoop: who's the better shot?", "two_desc": "Pass the phone, take turns, compare the splats and crown the champion. No sign-up, no internet lobby — just you, a friend and a lot of ice cream.", "cta_title": "Get Hitscoop", "cta_desc": "Free on the App Store and Google Play.", "about_title": "About us", "about_p": "Hitscoop is made by Swiff Studio, the games team of Swiff Agency in Istanbul. We make colourful, good-hearted games for everyone: no accounts, no personal data, just fun.", "follow": "Follow us", "langs": "18 languages", "free": "Free to play", "nav_priv": "Privacy", "nav_terms": "Terms", "tag": "Fling ice cream at everyone who ever annoyed you!", "desc": "Load your slingshot, aim for the forehead and splat! The boss, the bride, the know-it-all professor, the fake mall Santa… Every character dodges, hides and fights back in their own way. Play alone or with a friend on the same phone in Two Scoop.", "soon": "Coming soon"}, "tr": {"nav_game": "Oyun", "nav_chars": "Karakterler", "nav_about": "Hakkımızda", "kicker": "Dondurmalı intikam parti oyunu", "dev_title": "Her yerde oyna", "dev_desc": "iPhone, iPad, Android telefon ve tabletler için yapıldı. Her ekran cihazını tam dolduruyor — ister büyük tablet ister küçük telefon.", "dev_phone": "Android telefon", "dev_tab": "Android tablet", "story_title": "Hikayemiz", "story_p1": "Herkesin bir tane vardır: emeğini sahiplenen patron, gülmekten durmayan sınıf arkadaşı, sürpriz sınavlara bayılan hoca.", "story_p2": "Kahramanımızın ne yüzü ne adı var — çünkü kahraman sensin. Bir sapan ve dondurma dolu bir dondurucuyla tatlı ve zararsız intikamını alıyorsun, her seferinde bir şap!", "chars_title": "Hedeflerle tanış", "chars_desc": "Sekiz karakter, sekiz dünya — her biri kendi yöntemiyle kaçıyor, saklanıyor ve karşılık veriyor.", "r_ofisci": "Ofis çalışanı", "r_patron": "Patron", "r_gelin": "Gelin", "r_liseli": "Liseli", "r_kantin": "Kantinin kraliçesi", "r_profesor": "Profesör", "r_hoca": "Hoca", "r_noel": "Sahte AVM Noel Babası", "feat_title": "Oyuncular neden seviyor", "f1t": "Alnın ortasına nişan al", "f1d": "Çek, nişan al, bırak. Tam ortaya isabet çok puan getirir, hissi de bir o kadar güzel.", "f2t": "Özel dondurmalar", "f2d": "Çikolata Bombası, Dondurucu, Gökkuşağı, Güdümlü Vanilya — her lezzetin bir gücü var.", "f3t": "Scoop Scope aletleri", "f3d": "Külah Lazer, Scoopbow, Scoopapult: dondurmanı fırlatmanın çılgın yeni yolları.", "f4t": "Two Scoop", "f4d": "Tek telefon, iki oyuncu. Sırayla atın, en iyi nişancı kim görün.", "f5t": "40 bölüm, 8 dünya", "f5d": "Ofis, düğün, sınıf, kantin, üniversite ve epey şüpheli bir yılbaşı.", "f6t": "Adil ve ücretsiz", "f6d": "Ücretsiz oyna. Reklam yalnızca ödül için sen izlemeyi seçersen çıkar.", "shots_title": "Oyundan kareler", "shots_desc": "Telefon ve tabletten gerçek oyun ekranları.", "two_title": "Two Scoop: kim daha iyi nişancı?", "two_desc": "Telefonu uzat, sırayla at, şapları karşılaştır ve şampiyonu taçlandır. Kayıt yok, internet lobisi yok — sen, bir arkadaşın ve bolca dondurma.", "cta_title": "Hitscoop'u indir", "cta_desc": "App Store ve Google Play'de ücretsiz.", "about_title": "Hakkımızda", "about_p": "Hitscoop, İstanbul'daki Swiff Agency'nin oyun ekibi Swiff Studio tarafından yapıldı. Herkes için renkli, iyi kalpli oyunlar yapıyoruz: hesap yok, kişisel veri yok, sadece eğlence.", "follow": "Bizi takip et", "langs": "18 dil", "free": "Ücretsiz", "nav_priv": "Gizlilik", "nav_terms": "Kullanım Koşulları", "tag": "Hayatını zehirleyen herkese dondurma fırlat!", "desc": "Sapanını doldur, alnın ortasına nişan al ve şlap! Patron, gelin, her şeyi bilen profesör, AVM'nin sahte Noel Babası… Her karakter kendi yöntemiyle kaçıyor, saklanıyor, karşılık veriyor. Tek başına oyna ya da Two Scoop ile aynı telefonda bir arkadaşınla yarış.", "soon": "Yakında"}, "de": {"nav_game": "Das Spiel", "nav_chars": "Figuren", "nav_about": "Über uns", "kicker": "Das Eiscreme-Rache-Partyspiel", "dev_title": "Überall spielen", "dev_desc": "Gemacht für iPhone, iPad, Android-Smartphones und -Tablets. Jeder Bildschirm füllt dein Gerät perfekt aus — großes Tablet oder kleines Handy.", "dev_phone": "Android-Smartphone", "dev_tab": "Android-Tablet", "story_title": "Unsere Geschichte", "story_p1": "Jeder kennt so jemanden: den Chef, der sich mit fremden Federn schmückt, den Mitschüler, der nie aufhört zu lachen, die Lehrerin, die Überraschungstests liebt.", "story_p2": "Unser Held hat kein Gesicht und keinen Namen — denn der Held bist du. Mit einer Schleuder und einer Gefriertruhe voller Eis nimmst du deine süße, harmlose Rache, ein Platsch nach dem anderen.", "chars_title": "Triff die Ziele", "chars_desc": "Acht Figuren, acht Welten — jede weicht aus, versteckt sich und wehrt sich auf ihre eigene Art.", "r_ofisci": "Büroangestellter", "r_patron": "Der Chef", "r_gelin": "Die Braut", "r_liseli": "Schüler", "r_kantin": "Kantinenkönigin", "r_profesor": "Professor", "r_hoca": "Dozentin", "r_noel": "Falscher Kaufhaus-Weihnachtsmann", "feat_title": "Darum lieben Spieler es", "f1t": "Ziel auf die Stirn", "f1d": "Ziehen, zielen, loslassen. Ein Volltreffer bringt viele Punkte und fühlt sich noch besser an.", "f2t": "Spezialeis", "f2d": "Schoko-Bombe, Froster, Regenbogen-Split, Zielsuch-Vanille — jede Sorte hat eine Kraft.", "f3t": "Scoop-Scope-Gadgets", "f3d": "Waffel-Laser, Scoopbow, Scoopapult: verrückte neue Arten, dein Eis abzufeuern.", "f4t": "Two Scoop", "f4d": "Ein Handy, zwei Spieler. Abwechselnd schießen und herausfinden, wer besser zielt.", "f5t": "40 Level, 8 Welten", "f5d": "Büro, Hochzeit, Klassenzimmer, Kantine, Uni und ein sehr verdächtiges Weihnachten.", "f6t": "Fair und kostenlos", "f6d": "Kostenlos spielen. Werbung erscheint nur, wenn du sie für eine Belohnung ansehen willst.", "shots_title": "So sieht es aus", "shots_desc": "Echte Spielszenen auf Smartphone und Tablet.", "two_title": "Two Scoop: Wer zielt besser?", "two_desc": "Handy weitergeben, abwechselnd schießen, Treffer vergleichen und den Champion küren. Keine Anmeldung, keine Online-Lobby — nur du, ein Freund und jede Menge Eis.", "cta_title": "Hol dir Hitscoop", "cta_desc": "Kostenlos im App Store und bei Google Play.", "about_title": "Über uns", "about_p": "Hitscoop stammt von Swiff Studio, dem Spieleteam der Swiff Agency in Istanbul. Wir machen bunte, gutherzige Spiele für alle: keine Konten, keine persönlichen Daten, nur Spaß.", "follow": "Folge uns", "langs": "18 Sprachen", "free": "Kostenlos spielbar", "nav_priv": "Datenschutz", "nav_terms": "Nutzungsbedingungen", "tag": "Wirf Eis auf alle, die dir je auf die Nerven gegangen sind!", "desc": "Schleuder laden, auf die Stirn zielen und platsch! Der Chef, die Braut, der besserwisserische Professor, der falsche Kaufhaus-Weihnachtsmann … Jede Figur weicht aus, versteckt sich und wehrt sich auf ihre Art. Spiel allein oder mit einem Freund am selben Handy im Two-Scoop-Modus.", "soon": "Demnächst"}, "fr": {"nav_game": "Le jeu", "nav_chars": "Personnages", "nav_about": "À propos", "kicker": "Le jeu de fête de la revanche à la glace", "dev_title": "Joue partout", "dev_desc": "Conçu pour iPhone, iPad, téléphones et tablettes Android. Chaque écran remplit parfaitement ton appareil — grande tablette ou petit téléphone.", "dev_phone": "Téléphone Android", "dev_tab": "Tablette Android", "story_title": "Notre histoire", "story_p1": "Tout le monde a quelqu'un : le patron qui s'attribue tes mérites, le camarade qui n'arrête pas de rire, la prof qui adore les interros surprises.", "story_p2": "Notre héros n'a ni visage ni nom — parce que le héros, c'est toi. Armé d'un lance-pierre et d'un congélateur plein de glace, tu prends ta douce revanche, sans faire de mal, un splash à la fois.", "chars_title": "Rencontre les cibles", "chars_desc": "Huit personnages, huit mondes — chacun esquive, se cache et riposte à sa façon.", "r_ofisci": "Employé de bureau", "r_patron": "Le patron", "r_gelin": "La mariée", "r_liseli": "Lycéen", "r_kantin": "Reine de la cantine", "r_profesor": "Professeur", "r_hoca": "Maîtresse de conférences", "r_noel": "Faux Père Noël du centre commercial", "feat_title": "Pourquoi les joueurs l'adorent", "f1t": "Vise le front", "f1d": "Tire, vise, lâche. Un tir en plein centre rapporte gros et fait encore plus plaisir.", "f2t": "Glaces spéciales", "f2d": "Choco Bombe, Givreuse, Arc-en-ciel, Vanille à tête chercheuse — chaque parfum a un pouvoir.", "f3t": "Gadgets Scoop Scope", "f3d": "Laser Cornet, Scoopbow, Scoopapulte : de nouvelles façons folles de lancer ta glace.", "f4t": "Two Scoop", "f4d": "Un téléphone, deux joueurs. Tirez à tour de rôle et voyez qui vise le mieux.", "f5t": "40 niveaux, 8 mondes", "f5d": "Bureau, mariage, classe, cantine, université et un Noël très louche.", "f6t": "Juste et gratuit", "f6d": "Gratuit. Les pubs n'apparaissent que si tu choisis d'en regarder une pour une récompense.", "shots_title": "En images", "shots_desc": "De vrais écrans du jeu sur téléphone et tablette.", "two_title": "Two Scoop : qui vise le mieux ?", "two_desc": "Passe le téléphone, tirez chacun votre tour, comparez les splashs et couronnez le champion. Pas d'inscription, pas de salon en ligne — juste toi, un ami et beaucoup de glace.", "cta_title": "Télécharge Hitscoop", "cta_desc": "Gratuit sur l'App Store et Google Play.", "about_title": "À propos", "about_p": "Hitscoop est créé par Swiff Studio, l'équipe jeux de Swiff Agency à Istanbul. Nous faisons des jeux colorés et bienveillants pour tous : pas de compte, pas de données personnelles, que du plaisir.", "follow": "Suis-nous", "langs": "18 langues", "free": "Gratuit", "nav_priv": "Confidentialité", "nav_terms": "Conditions d'utilisation", "tag": "Balance de la glace sur tous ceux qui t'ont un jour énervé !", "desc": "Charge ton lance-pierre, vise le front et splash ! Le patron, la mariée, le professeur je-sais-tout, le faux Père Noël du centre commercial… Chaque personnage esquive, se cache et riposte à sa façon. Joue seul ou avec un ami sur le même téléphone en mode Two Scoop.", "soon": "Bientôt"}, "es": {"nav_game": "El juego", "nav_chars": "Personajes", "nav_about": "Sobre nosotros", "kicker": "El juego de fiesta de la venganza con helado", "dev_title": "Juega donde quieras", "dev_desc": "Hecho para iPhone, iPad, teléfonos y tabletas Android. Cada pantalla llena tu dispositivo a la perfección — tableta grande o móvil pequeño.", "dev_phone": "Teléfono Android", "dev_tab": "Tableta Android", "story_title": "Nuestra historia", "story_p1": "Todos tenemos a alguien: el jefe que se lleva el mérito, el compañero que no para de reír, la profe que adora los exámenes sorpresa.", "story_p2": "Nuestro héroe no tiene cara ni nombre, porque el héroe eres tú. Con un tirachinas y un congelador lleno de helado, te tomas tu dulce e inofensiva venganza, un splash cada vez.", "chars_title": "Conoce a los objetivos", "chars_desc": "Ocho personajes, ocho mundos: cada uno esquiva, se esconde y contraataca a su manera.", "r_ofisci": "Oficinista", "r_patron": "El jefe", "r_gelin": "La novia", "r_liseli": "Estudiante de instituto", "r_kantin": "Reina de la cafetería", "r_profesor": "Profesor", "r_hoca": "Profesora", "r_noel": "Falso Papá Noel del centro comercial", "feat_title": "Por qué encanta", "f1t": "Apunta a la frente", "f1d": "Tira, apunta y suelta. Un tiro en el centro da muchos puntos y se siente aún mejor.", "f2t": "Helados especiales", "f2d": "Choco Bomba, Congelador, Arcoíris, Vainilla Teledirigida: cada sabor tiene un poder.", "f3t": "Artilugios Scoop Scope", "f3d": "Láser Cucurucho, Scoopbow, Scoopapulta: nuevas y locas formas de lanzar tu helado.", "f4t": "Two Scoop", "f4d": "Un móvil, dos jugadores. Turnaos y descubrid quién tiene mejor puntería.", "f5t": "40 niveles, 8 mundos", "f5d": "Oficina, boda, aula, cafetería, universidad y una Navidad muy sospechosa.", "f6t": "Justo y gratis", "f6d": "Gratis. Los anuncios solo aparecen si eliges ver uno a cambio de una recompensa.", "shots_title": "Míralo en acción", "shots_desc": "Pantallas reales del juego en teléfono y tableta.", "two_title": "Two Scoop: ¿quién apunta mejor?", "two_desc": "Pasa el móvil, turnaos, comparad los splash y coronad al campeón. Sin registro ni salas online: solo tú, un amigo y mucho helado.", "cta_title": "Consigue Hitscoop", "cta_desc": "Gratis en App Store y Google Play.", "about_title": "Sobre nosotros", "about_p": "Hitscoop está hecho por Swiff Studio, el equipo de juegos de Swiff Agency en Estambul. Creamos juegos coloridos y de buen corazón para todos: sin cuentas, sin datos personales, solo diversión.", "follow": "Síguenos", "langs": "18 idiomas", "free": "Gratis", "nav_priv": "Privacidad", "nav_terms": "Condiciones de uso", "tag": "¡Lanza helado a todos los que alguna vez te sacaron de quicio!", "desc": "Carga tu tirachinas, apunta a la frente ¡y plaf! El jefe, la novia, el profesor sabelotodo, el falso Papá Noel del centro comercial… Cada personaje esquiva, se esconde y contraataca a su manera. Juega solo o con un amigo en el mismo móvil en el modo Two Scoop.", "soon": "Próximamente"}, "pt": {"nav_game": "O jogo", "nav_chars": "Personagens", "nav_about": "Sobre nós", "kicker": "O jogo de festa da vingança com sorvete", "dev_title": "Jogue em qualquer lugar", "dev_desc": "Feito para iPhone, iPad, celulares e tablets Android. Cada tela preenche seu aparelho perfeitamente — tablet grande ou celular pequeno.", "dev_phone": "Celular Android", "dev_tab": "Tablet Android", "story_title": "Nossa história", "story_p1": "Todo mundo tem alguém: o chefe que leva o crédito, o colega que não para de rir, a professora que adora prova surpresa.", "story_p2": "Nosso herói não tem rosto nem nome — porque o herói é você. Com um estilingue e um freezer cheio de sorvete, você se vinga de um jeito doce e inofensivo, um splash de cada vez.", "chars_title": "Conheça os alvos", "chars_desc": "Oito personagens, oito mundos — cada um desvia, se esconde e revida do seu jeito.", "r_ofisci": "Funcionário de escritório", "r_patron": "O chefe", "r_gelin": "A noiva", "r_liseli": "Colegial", "r_kantin": "Rainha da cantina", "r_profesor": "Professor", "r_hoca": "Professora", "r_noel": "Papai Noel falso do shopping", "feat_title": "Por que os jogadores amam", "f1t": "Mire na testa", "f1d": "Puxe, mire, solte. Acertar bem no centro vale muitos pontos e é ainda mais gostoso.", "f2t": "Sorvetes especiais", "f2d": "Choco Bomba, Congelador, Arco-íris, Baunilha Teleguiada — cada sabor tem um poder.", "f3t": "Engenhocas Scoop Scope", "f3d": "Laser de Casquinha, Scoopbow, Scoopapulta: novas formas malucas de lançar seu sorvete.", "f4t": "Two Scoop", "f4d": "Um celular, dois jogadores. Revezem e descubram quem tem a melhor mira.", "f5t": "40 fases, 8 mundos", "f5d": "Escritório, casamento, sala de aula, cantina, universidade e um Natal muito suspeito.", "f6t": "Justo e grátis", "f6d": "Grátis para jogar. Anúncios só aparecem quando você escolhe assistir a um por uma recompensa.", "shots_title": "Veja em ação", "shots_desc": "Telas reais do jogo no celular e no tablet.", "two_title": "Two Scoop: quem mira melhor?", "two_desc": "Passe o celular, revezem, comparem os splashes e coroem o campeão. Sem cadastro, sem sala online — só você, um amigo e muito sorvete.", "cta_title": "Baixe Hitscoop", "cta_desc": "Grátis na App Store e no Google Play.", "about_title": "Sobre nós", "about_p": "Hitscoop é feito pelo Swiff Studio, a equipe de jogos da Swiff Agency em Istambul. Fazemos jogos coloridos e de bom coração para todos: sem contas, sem dados pessoais, só diversão.", "follow": "Siga-nos", "langs": "18 idiomas", "free": "Grátis", "nav_priv": "Privacidade", "nav_terms": "Termos de uso", "tag": "Arremesse sorvete em todo mundo que já te tirou do sério!", "desc": "Carregue o estilingue, mire na testa e splash! O chefe, a noiva, o professor sabe-tudo, o falso Papai Noel do shopping… Cada personagem desvia, se esconde e revida do seu jeito. Jogue sozinho ou com um amigo no mesmo celular no modo Two Scoop.", "soon": "Em breve"}, "it": {"nav_game": "Il gioco", "nav_chars": "Personaggi", "nav_about": "Chi siamo", "kicker": "Il party game della vendetta al gelato", "dev_title": "Gioca ovunque", "dev_desc": "Creato per iPhone, iPad, smartphone e tablet Android. Ogni schermata riempie perfettamente il tuo dispositivo — tablet grande o telefono piccolo.", "dev_phone": "Smartphone Android", "dev_tab": "Tablet Android", "story_title": "La nostra storia", "story_p1": "Tutti ne hanno uno: il capo che si prende i meriti, il compagno che non smette mai di ridere, la prof che adora le interrogazioni a sorpresa.", "story_p2": "Il nostro eroe non ha volto né nome — perché l'eroe sei tu. Con una fionda e un freezer pieno di gelato, ti prendi una vendetta dolce e innocua, uno splash alla volta.", "chars_title": "Conosci i bersagli", "chars_desc": "Otto personaggi, otto mondi — ognuno schiva, si nasconde e reagisce a modo suo.", "r_ofisci": "Impiegato", "r_patron": "Il capo", "r_gelin": "La sposa", "r_liseli": "Liceale", "r_kantin": "Regina della mensa", "r_profesor": "Professore", "r_hoca": "Docente", "r_noel": "Finto Babbo Natale del centro commerciale", "feat_title": "Perché piace ai giocatori", "f1t": "Mira alla fronte", "f1d": "Tira, mira, lascia. Un colpo in pieno centro vale tanto e dà ancora più soddisfazione.", "f2t": "Gelati speciali", "f2d": "Choco Bomba, Congelatore, Arcobaleno, Vaniglia Teleguidata: ogni gusto ha un potere.", "f3t": "Gadget Scoop Scope", "f3d": "Laser Cono, Scoopbow, Scoopapulta: nuovi modi pazzi per lanciare il gelato.", "f4t": "Two Scoop", "f4d": "Un telefono, due giocatori. Fate a turno e scoprite chi ha la mira migliore.", "f5t": "40 livelli, 8 mondi", "f5d": "Ufficio, matrimonio, classe, mensa, università e un Natale molto sospetto.", "f6t": "Giusto e gratis", "f6d": "Gratis. La pubblicità compare solo se scegli di guardarla per un premio.", "shots_title": "Guardalo in azione", "shots_desc": "Schermate reali del gioco su telefono e tablet.", "two_title": "Two Scoop: chi ha la mira migliore?", "two_desc": "Passa il telefono, fate a turno, confrontate gli splash e incoronate il campione. Niente registrazione, niente lobby online: solo tu, un amico e tanto gelato.", "cta_title": "Scarica Hitscoop", "cta_desc": "Gratis su App Store e Google Play.", "about_title": "Chi siamo", "about_p": "Hitscoop è creato da Swiff Studio, il team giochi di Swiff Agency a Istanbul. Facciamo giochi colorati e di buon cuore per tutti: niente account, niente dati personali, solo divertimento.", "follow": "Seguici", "langs": "18 lingue", "free": "Gratis", "nav_priv": "Privacy", "nav_terms": "Termini d'uso", "tag": "Lancia il gelato a chiunque ti abbia mai fatto saltare i nervi!", "desc": "Carica la fionda, mira alla fronte e splash! Il capo, la sposa, il professore saputello, il finto Babbo Natale del centro commerciale… Ogni personaggio schiva, si nasconde e reagisce a modo suo. Gioca da solo o con un amico sullo stesso telefono nella modalità Two Scoop.", "soon": "Prossimamente"}, "nl": {"nav_game": "De game", "nav_chars": "Personages", "nav_about": "Over ons", "kicker": "De ijsjes-wraak partygame", "dev_title": "Speel overal", "dev_desc": "Gemaakt voor iPhone, iPad, Android-telefoons en -tablets. Elk scherm vult je apparaat perfect — grote tablet of kleine telefoon.", "dev_phone": "Android-telefoon", "dev_tab": "Android-tablet", "story_title": "Ons verhaal", "story_p1": "Iedereen heeft er wel een: de baas die met de eer strijkt, de klasgenoot die nooit stopt met lachen, de docent die dol is op overhoringen.", "story_p2": "Onze held heeft geen gezicht en geen naam — want de held ben jij. Met een katapult en een vriezer vol ijs neem je je zoete, onschuldige wraak, splat voor splat.", "chars_title": "Maak kennis met de doelwitten", "chars_desc": "Acht personages, acht werelden — elk ontwijkt, verstopt zich en slaat terug op een eigen manier.", "r_ofisci": "Kantoormedewerker", "r_patron": "De baas", "r_gelin": "De bruid", "r_liseli": "Scholier", "r_kantin": "Kantinekoningin", "r_profesor": "Professor", "r_hoca": "Docente", "r_noel": "Nep-kerstman uit het winkelcentrum", "feat_title": "Waarom spelers het geweldig vinden", "f1t": "Mik op het voorhoofd", "f1d": "Trekken, mikken, loslaten. Een voltreffer levert veel op en voelt nog beter.", "f2t": "Speciale ijsjes", "f2d": "Chocobom, Vriezer, Regenboog-split, Zoekende Vanille — elke smaak heeft een kracht.", "f3t": "Scoop Scope-gadgets", "f3d": "Hoorntjeslaser, Scoopbow, Scoopapult: gekke nieuwe manieren om je ijs te lanceren.", "f4t": "Two Scoop", "f4d": "Eén telefoon, twee spelers. Om de beurt schieten en kijken wie het beste mikt.", "f5t": "40 levels, 8 werelden", "f5d": "Kantoor, bruiloft, klaslokaal, kantine, universiteit en een heel verdachte kerst.", "f6t": "Eerlijk en gratis", "f6d": "Gratis te spelen. Advertenties verschijnen alleen als jij er een kiest te bekijken voor een beloning.", "shots_title": "Zie het in actie", "shots_desc": "Echte schermen uit de game op telefoon en tablet.", "two_title": "Two Scoop: wie mikt het best?", "two_desc": "Geef de telefoon door, om de beurt, vergelijk de splats en kroon de kampioen. Geen account, geen online lobby — alleen jij, een vriend en heel veel ijs.", "cta_title": "Download Hitscoop", "cta_desc": "Gratis in de App Store en Google Play.", "about_title": "Over ons", "about_p": "Hitscoop is gemaakt door Swiff Studio, het gameteam van Swiff Agency in Istanbul. We maken kleurrijke, goedhartige games voor iedereen: geen accounts, geen persoonsgegevens, alleen plezier.", "follow": "Volg ons", "langs": "18 talen", "free": "Gratis", "nav_priv": "Privacy", "nav_terms": "Gebruiksvoorwaarden", "tag": "Gooi ijs naar iedereen die je ooit op de zenuwen heeft gewerkt!", "desc": "Laad je katapult, mik op het voorhoofd en splat! De baas, de bruid, de betweterige professor, de nep-kerstman uit het winkelcentrum… Elk personage ontwijkt, verstopt zich en slaat op zijn eigen manier terug. Speel alleen of met een vriend op dezelfde telefoon in Two Scoop.", "soon": "Binnenkort"}, "pl": {"nav_game": "Gra", "nav_chars": "Postacie", "nav_about": "O nas", "kicker": "Imprezowa gra o lodowej zemście", "dev_title": "Graj wszędzie", "dev_desc": "Stworzona na iPhone'a, iPada, telefony i tablety z Androidem. Każdy ekran idealnie wypełnia urządzenie — duży tablet czy mały telefon.", "dev_phone": "Telefon z Androidem", "dev_tab": "Tablet z Androidem", "story_title": "Nasza historia", "story_p1": "Każdy ma kogoś takiego: szefa, który przypisuje sobie zasługi, kolegę z klasy, który ciągle się śmieje, nauczycielkę kochającą kartkówki.", "story_p2": "Nasz bohater nie ma twarzy ani imienia — bo bohaterem jesteś ty. Z procą i zamrażarką pełną lodów bierzesz słodki, nieszkodliwy odwet, plask po plasku.", "chars_title": "Poznaj cele", "chars_desc": "Osiem postaci, osiem światów — każda robi uniki, chowa się i odpowiada po swojemu.", "r_ofisci": "Pracownik biurowy", "r_patron": "Szef", "r_gelin": "Panna młoda", "r_liseli": "Licealista", "r_kantin": "Królowa stołówki", "r_profesor": "Profesor", "r_hoca": "Wykładowczyni", "r_noel": "Fałszywy Mikołaj z galerii", "feat_title": "Dlaczego gracze ją kochają", "f1t": "Celuj w czoło", "f1d": "Naciągnij, wyceluj, puść. Trafienie w sam środek daje mnóstwo punktów i jeszcze więcej frajdy.", "f2t": "Specjalne lody", "f2d": "Czekobomba, Zamrażacz, Tęczowy Podział, Naprowadzana Wanilia — każdy smak ma moc.", "f3t": "Gadżety Scoop Scope", "f3d": "Rożkowy Laser, Scoopbow, Scoopapulta: szalone nowe sposoby na wystrzał lodów.", "f4t": "Two Scoop", "f4d": "Jeden telefon, dwóch graczy. Strzelajcie na zmianę i sprawdźcie, kto celuje lepiej.", "f5t": "40 poziomów, 8 światów", "f5d": "Biuro, wesele, klasa, stołówka, uczelnia i bardzo podejrzane święta.", "f6t": "Uczciwie i za darmo", "f6d": "Darmowa gra. Reklama pojawia się tylko wtedy, gdy sam zechcesz ją obejrzeć za nagrodę.", "shots_title": "Zobacz w akcji", "shots_desc": "Prawdziwe ekrany z gry na telefonie i tablecie.", "two_title": "Two Scoop: kto celuje lepiej?", "two_desc": "Podaj telefon, strzelajcie na zmianę, porównajcie plaski i ukoronujcie mistrza. Bez rejestracji, bez lobby online — tylko ty, znajomy i mnóstwo lodów.", "cta_title": "Pobierz Hitscoop", "cta_desc": "Za darmo w App Store i Google Play.", "about_title": "O nas", "about_p": "Hitscoop tworzy Swiff Studio, zespół gier Swiff Agency w Stambule. Robimy kolorowe, życzliwe gry dla wszystkich: bez kont, bez danych osobowych, tylko zabawa.", "follow": "Obserwuj nas", "langs": "18 języków", "free": "Za darmo", "nav_priv": "Prywatność", "nav_terms": "Warunki korzystania", "tag": "Rzucaj lodami we wszystkich, którzy kiedykolwiek zaleźli ci za skórę!", "desc": "Załaduj procę, celuj w czoło i plask! Szef, panna młoda, przemądrzały profesor, fałszywy Mikołaj z galerii… Każda postać robi uniki, chowa się i odpowiada na swój sposób. Graj sam albo z przyjacielem na jednym telefonie w trybie Two Scoop.", "soon": "Wkrótce"}, "ro": {"nav_game": "Jocul", "nav_chars": "Personaje", "nav_about": "Despre noi", "kicker": "Jocul de petrecere al răzbunării cu înghețată", "dev_title": "Joacă oriunde", "dev_desc": "Creat pentru iPhone, iPad, telefoane și tablete Android. Fiecare ecran îți umple perfect dispozitivul — tabletă mare sau telefon mic.", "dev_phone": "Telefon Android", "dev_tab": "Tabletă Android", "story_title": "Povestea noastră", "story_p1": "Toată lumea are pe cineva: șeful care își asumă meritele, colegul care nu se mai oprește din râs, profesoara care adoră extemporalele.", "story_p2": "Eroul nostru nu are chip și nici nume — pentru că eroul ești tu. Cu o praștie și un congelator plin cu înghețată, îți iei o răzbunare dulce și nevinovată, câte un pleosc pe rând.", "chars_title": "Cunoaște țintele", "chars_desc": "Opt personaje, opt lumi — fiecare se ferește, se ascunde și ripostează în felul lui.", "r_ofisci": "Angajat de birou", "r_patron": "Șeful", "r_gelin": "Mireasa", "r_liseli": "Licean", "r_kantin": "Regina cantinei", "r_profesor": "Profesor", "r_hoca": "Lectoriță", "r_noel": "Moș Crăciun fals de mall", "feat_title": "De ce îl iubesc jucătorii", "f1t": "Țintește fruntea", "f1d": "Trage, țintește, eliberează. O lovitură fix în centru aduce multe puncte și se simte și mai bine.", "f2t": "Înghețate speciale", "f2d": "Bomba de Ciocolată, Congelatorul, Curcubeul, Vanilia Ghidată — fiecare aromă are o putere.", "f3t": "Gadgeturi Scoop Scope", "f3d": "Laser Cornet, Scoopbow, Scoopapultă: moduri noi și nebune de a-ți lansa înghețata.", "f4t": "Two Scoop", "f4d": "Un telefon, doi jucători. Trageți pe rând și aflați cine țintește mai bine.", "f5t": "40 de niveluri, 8 lumi", "f5d": "Birou, nuntă, clasă, cantină, universitate și un Crăciun foarte suspect.", "f6t": "Corect și gratuit", "f6d": "Gratuit. Reclamele apar doar când alegi să urmărești una pentru o recompensă.", "shots_title": "Vezi-l în acțiune", "shots_desc": "Ecrane reale din joc pe telefon și tabletă.", "two_title": "Two Scoop: cine țintește mai bine?", "two_desc": "Dă telefonul mai departe, trageți pe rând, comparați pleoscurile și încoronați campionul. Fără cont, fără lobby online — doar tu, un prieten și multă înghețată.", "cta_title": "Descarcă Hitscoop", "cta_desc": "Gratuit în App Store și Google Play.", "about_title": "Despre noi", "about_p": "Hitscoop este creat de Swiff Studio, echipa de jocuri a Swiff Agency din Istanbul. Facem jocuri colorate și pline de bunătate pentru toată lumea: fără conturi, fără date personale, doar distracție.", "follow": "Urmărește-ne", "langs": "18 limbi", "free": "Gratuit", "nav_priv": "Confidențialitate", "nav_terms": "Termeni de utilizare", "tag": "Aruncă înghețată în toți cei care te-au călcat vreodată pe nervi!", "desc": "Încarcă praștia, țintește fruntea și pleosc! Șeful, mireasa, profesorul atotștiutor, Moș Crăciunul fals din mall… Fiecare personaj se ferește, se ascunde și ripostează în felul lui. Joacă singur sau cu un prieten pe același telefon în modul Two Scoop.", "soon": "În curând"}, "sq": {"nav_game": "Loja", "nav_chars": "Personazhet", "nav_about": "Rreth nesh", "kicker": "Loja festive e hakmarrjes me akullore", "dev_title": "Luaj kudo", "dev_desc": "E krijuar për iPhone, iPad, telefona dhe tableta Android. Çdo ekran mbush pajisjen tënde në mënyrë perfekte — tabletë e madhe apo telefon i vogël.", "dev_phone": "Telefon Android", "dev_tab": "Tabletë Android", "story_title": "Historia jonë", "story_p1": "Të gjithë kanë dikë: shefin që merr meritat, shokun e klasës që s'ndalet së qeshuri, mësuesen që i do testet e papritura.", "story_p2": "Heroi ynë nuk ka as fytyrë, as emër — sepse heroi je ti. Me një llastiqe dhe një frigorifer plot akullore, merr hakmarrjen tënde të ëmbël dhe të padëmshme, një spërkatje pas tjetrës.", "chars_title": "Njihu me objektivat", "chars_desc": "Tetë personazhe, tetë botë — secili shmanget, fshihet dhe kundërpërgjigjet në mënyrën e vet.", "r_ofisci": "Punonjës zyre", "r_patron": "Shefi", "r_gelin": "Nusja", "r_liseli": "Gjimnazist", "r_kantin": "Mbretëresha e mensës", "r_profesor": "Profesor", "r_hoca": "Lektore", "r_noel": "Babadimër i rremë i qendrës tregtare", "feat_title": "Pse e duan lojtarët", "f1t": "Synoje ballin", "f1d": "Tërhiq, synto, lësho. Goditja në qendër sjell shumë pikë dhe ndihet edhe më mirë.", "f2t": "Akullore speciale", "f2d": "Bomba Çokollate, Ngrirësi, Ylberi, Vanilja e Drejtuar — çdo shije ka një fuqi.", "f3t": "Pajisjet Scoop Scope", "f3d": "Lazer Kone, Scoopbow, Scoopapultë: mënyra të reja e të çmendura për të hedhur akulloren.", "f4t": "Two Scoop", "f4d": "Një telefon, dy lojtarë. Gjuani me radhë dhe shihni kush synon më mirë.", "f5t": "40 nivele, 8 botë", "f5d": "Zyra, dasma, klasa, mensa, universiteti dhe një Krishtlindje shumë e dyshimtë.", "f6t": "E drejtë dhe falas", "f6d": "Falas. Reklamat shfaqen vetëm kur zgjedh të shikosh një për shpërblim.", "shots_title": "Shiko si luhet", "shots_desc": "Ekrane të vërteta të lojës në telefon dhe tabletë.", "two_title": "Two Scoop: kush synon më mirë?", "two_desc": "Jepi telefonin, gjuani me radhë, krahasoni spërkatjet dhe kurorëzoni kampionin. Pa regjistrim, pa sallë online — vetëm ti, një shok dhe shumë akullore.", "cta_title": "Shkarko Hitscoop", "cta_desc": "Falas në App Store dhe Google Play.", "about_title": "Rreth nesh", "about_p": "Hitscoop është krijuar nga Swiff Studio, ekipi i lojërave të Swiff Agency në Stamboll. Bëjmë lojëra plot ngjyra dhe zemërmira për të gjithë: pa llogari, pa të dhëna personale, vetëm argëtim.", "follow": "Na ndiq", "langs": "18 gjuhë", "free": "Falas", "nav_priv": "Privatësia", "nav_terms": "Kushtet e përdorimit", "tag": "Hidhu akullore të gjithëve që të kanë mërzitur ndonjëherë!", "desc": "Mbush llastikun, synoje ballin dhe plaf! Shefi, nusja, profesori që di gjithçka, Babadimri i rremë i qendrës tregtare… Çdo personazh shmanget, fshihet dhe kundërpërgjigjet në mënyrën e vet. Luaj vetëm ose me një shok në të njëjtin telefon në Two Scoop.", "soon": "Së shpejti"}, "id": {"nav_game": "Game", "nav_chars": "Karakter", "nav_about": "Tentang kami", "kicker": "Game pesta balas dendam pakai es krim", "dev_title": "Main di mana saja", "dev_desc": "Dibuat untuk iPhone, iPad, ponsel dan tablet Android. Setiap layar mengisi perangkatmu dengan sempurna — tablet besar atau ponsel kecil.", "dev_phone": "Ponsel Android", "dev_tab": "Tablet Android", "story_title": "Kisah kami", "story_p1": "Semua orang punya satu: bos yang mengaku-aku hasil kerjamu, teman sekelas yang tak berhenti tertawa, guru yang hobi kuis mendadak.", "story_p2": "Pahlawan kami tak punya wajah dan nama — karena pahlawannya adalah kamu. Bermodal ketapel dan freezer penuh es krim, kamu membalas dendam dengan manis dan tanpa bahaya, satu cipratan demi satu cipratan.", "chars_title": "Kenalan dengan targetnya", "chars_desc": "Delapan karakter, delapan dunia — masing-masing menghindar, bersembunyi, dan melawan dengan caranya sendiri.", "r_ofisci": "Pegawai kantor", "r_patron": "Si bos", "r_gelin": "Pengantin wanita", "r_liseli": "Anak SMA", "r_kantin": "Ratu kantin", "r_profesor": "Profesor", "r_hoca": "Dosen", "r_noel": "Sinterklas palsu di mal", "feat_title": "Kenapa pemain suka", "f1t": "Bidik dahinya", "f1d": "Tarik, bidik, lepaskan. Tepat di tengah dapat skor besar dan rasanya lebih puas.", "f2t": "Es krim spesial", "f2d": "Bom Cokelat, Pembeku, Pelangi, Vanila Pemandu — setiap rasa punya kekuatan.", "f3t": "Gadget Scoop Scope", "f3d": "Laser Cone, Scoopbow, Scoopapult: cara baru yang gila untuk meluncurkan es krim.", "f4t": "Two Scoop", "f4d": "Satu ponsel, dua pemain. Bergantian dan buktikan siapa penembak terbaik.", "f5t": "40 level, 8 dunia", "f5d": "Kantor, pernikahan, kelas, kantin, kampus, dan Natal yang sangat mencurigakan.", "f6t": "Adil dan gratis", "f6d": "Gratis dimainkan. Iklan hanya muncul jika kamu memilih menontonnya demi hadiah.", "shots_title": "Lihat aksinya", "shots_desc": "Layar asli dari game di ponsel dan tablet.", "two_title": "Two Scoop: siapa bidikannya lebih jitu?", "two_desc": "Oper ponselnya, bergantian, bandingkan cipratan, lalu nobatkan juaranya. Tanpa daftar, tanpa lobi online — hanya kamu, teman, dan banyak es krim.", "cta_title": "Dapatkan Hitscoop", "cta_desc": "Gratis di App Store dan Google Play.", "about_title": "Tentang kami", "about_p": "Hitscoop dibuat oleh Swiff Studio, tim game Swiff Agency di Istanbul. Kami membuat game yang ceria dan baik hati untuk semua orang: tanpa akun, tanpa data pribadi, hanya keseruan.", "follow": "Ikuti kami", "langs": "18 bahasa", "free": "Gratis", "nav_priv": "Privasi", "nav_terms": "Ketentuan Penggunaan", "tag": "Lempar es krim ke semua orang yang pernah bikin kamu kesal!", "desc": "Isi ketapelmu, bidik dahinya, dan cipratan! Bos, pengantin, profesor yang sok tahu, Sinterklas palsu di mal… Setiap karakter menghindar, bersembunyi, dan membalas dengan caranya sendiri. Main sendiri atau bersama teman di satu ponsel dalam mode Two Scoop.", "soon": "Segera hadir"}, "ru": {"nav_game": "Игра", "nav_chars": "Персонажи", "nav_about": "О нас", "kicker": "Вечеринка мороженой мести", "dev_title": "Играй где угодно", "dev_desc": "Создано для iPhone, iPad, смартфонов и планшетов на Android. Каждый экран идеально заполняет устройство — большой планшет или маленький телефон.", "dev_phone": "Смартфон Android", "dev_tab": "Планшет Android", "story_title": "Наша история", "story_p1": "У каждого есть такой человек: начальник, присваивающий чужие заслуги, одноклассник, который вечно смеётся, учительница, обожающая внезапные контрольные.", "story_p2": "У нашего героя нет ни лица, ни имени — потому что герой это ты. С рогаткой и морозилкой, полной мороженого, ты устраиваешь сладкую и безобидную месть — шлёп за шлёпом.", "chars_title": "Знакомься с целями", "chars_desc": "Восемь персонажей, восемь миров — каждый уворачивается, прячется и отвечает по-своему.", "r_ofisci": "Офисный работник", "r_patron": "Начальник", "r_gelin": "Невеста", "r_liseli": "Старшеклассник", "r_kantin": "Королева столовой", "r_profesor": "Профессор", "r_hoca": "Преподавательница", "r_noel": "Фальшивый Санта из торгового центра", "feat_title": "За что её любят", "f1t": "Целься в лоб", "f1d": "Натяни, прицелься, отпусти. Точно в центр — много очков и ещё больше удовольствия.", "f2t": "Особое мороженое", "f2d": "Шоко-бомба, Морозилка, Радужный сплит, Самонаводящаяся ваниль — у каждого вкуса своя сила.", "f3t": "Гаджеты Scoop Scope", "f3d": "Лазер-рожок, Scoopbow, Scoopapult: безумные новые способы запустить мороженое.", "f4t": "Two Scoop", "f4d": "Один телефон, два игрока. Стреляйте по очереди и выясните, кто метче.", "f5t": "40 уровней, 8 миров", "f5d": "Офис, свадьба, класс, столовая, университет и очень подозрительное Рождество.", "f6t": "Честно и бесплатно", "f6d": "Бесплатно. Реклама появляется, только если ты сам решишь посмотреть её ради награды.", "shots_title": "Смотри в действии", "shots_desc": "Настоящие экраны игры на телефоне и планшете.", "two_title": "Two Scoop: кто метче?", "two_desc": "Передай телефон, стреляйте по очереди, сравните кляксы и коронуйте чемпиона. Без регистрации и онлайн-лобби — только ты, друг и много мороженого.", "cta_title": "Скачай Hitscoop", "cta_desc": "Бесплатно в App Store и Google Play.", "about_title": "О нас", "about_p": "Hitscoop создан Swiff Studio — игровой командой Swiff Agency из Стамбула. Мы делаем яркие и добрые игры для всех: без аккаунтов, без личных данных, только веселье.", "follow": "Подписывайся", "langs": "18 языков", "free": "Бесплатно", "nav_priv": "Конфиденциальность", "nav_terms": "Условия использования", "tag": "Кидай мороженое во всех, кто тебя когда-либо бесил!", "desc": "Заряди рогатку, целься в лоб — и шлёп! Начальник, невеста, профессор-всезнайка, фальшивый Санта из торгового центра… Каждый персонаж уворачивается, прячется и отвечает по-своему. Играй один или с другом на одном телефоне в режиме Two Scoop.", "soon": "Скоро"}, "uk": {"nav_game": "Гра", "nav_chars": "Персонажі", "nav_about": "Про нас", "kicker": "Вечірка морозивної помсти", "dev_title": "Грай будь-де", "dev_desc": "Створено для iPhone, iPad, смартфонів і планшетів Android. Кожен екран ідеально заповнює пристрій — великий планшет чи маленький телефон.", "dev_phone": "Смартфон Android", "dev_tab": "Планшет Android", "story_title": "Наша історія", "story_p1": "У кожного є така людина: начальник, що привласнює заслуги, однокласник, який ніколи не перестає сміятися, вчителька, що обожнює раптові контрольні.", "story_p2": "У нашого героя немає ні обличчя, ні імені — бо герой це ти. З рогаткою та морозилкою, повною морозива, ти береш солодкий і безпечний реванш — ляп за ляпом.", "chars_title": "Знайомся з цілями", "chars_desc": "Вісім персонажів, вісім світів — кожен ухиляється, ховається й відповідає по-своєму.", "r_ofisci": "Офісний працівник", "r_patron": "Начальник", "r_gelin": "Наречена", "r_liseli": "Старшокласник", "r_kantin": "Королева їдальні", "r_profesor": "Професор", "r_hoca": "Викладачка", "r_noel": "Фальшивий Санта з торговельного центру", "feat_title": "Чому гравці її люблять", "f1t": "Цілься в лоб", "f1d": "Натягни, прицілься, відпусти. Влучання в центр дає багато очок і ще більше задоволення.", "f2t": "Особливе морозиво", "f2d": "Шоко-бомба, Морозилка, Райдужний спліт, Самонавідна ваніль — у кожного смаку своя сила.", "f3t": "Гаджети Scoop Scope", "f3d": "Лазер-ріжок, Scoopbow, Scoopapult: шалені нові способи запустити морозиво.", "f4t": "Two Scoop", "f4d": "Один телефон, двоє гравців. Стріляйте по черзі й з'ясуйте, хто влучніший.", "f5t": "40 рівнів, 8 світів", "f5d": "Офіс, весілля, клас, їдальня, університет і дуже підозріле Різдво.", "f6t": "Чесно й безкоштовно", "f6d": "Безкоштовно. Реклама з'являється, лише коли ти сам вирішиш переглянути її заради нагороди.", "shots_title": "Подивись у дії", "shots_desc": "Справжні екрани гри на телефоні й планшеті.", "two_title": "Two Scoop: хто влучніший?", "two_desc": "Передай телефон, стріляйте по черзі, порівняйте ляпки й коронуйте чемпіона. Без реєстрації та онлайн-лобі — лише ти, друг і багато морозива.", "cta_title": "Завантаж Hitscoop", "cta_desc": "Безкоштовно в App Store і Google Play.", "about_title": "Про нас", "about_p": "Hitscoop створено Swiff Studio — ігровою командою Swiff Agency зі Стамбула. Ми робимо яскраві й добрі ігри для всіх: без акаунтів, без особистих даних, лише розвага.", "follow": "Стеж за нами", "langs": "18 мов", "free": "Безкоштовно", "nav_priv": "Конфіденційність", "nav_terms": "Умови використання", "tag": "Кидай морозиво в усіх, хто тебе колись дратував!", "desc": "Заряди рогатку, цілься в лоб — і шльоп! Начальник, наречена, професор-всезнайко, фальшивий Санта з торгового центру… Кожен персонаж ухиляється, ховається й відповідає по-своєму. Грай сам або з другом на одному телефоні в режимі Two Scoop.", "soon": "Незабаром"}, "ja": {"nav_game": "ゲーム", "nav_chars": "キャラクター", "nav_about": "私たちについて", "kicker": "アイスクリームでリベンジするパーティーゲーム", "dev_title": "どこでもプレイ", "dev_desc": "iPhone、iPad、Androidスマホ・タブレットに対応。大きなタブレットでも小さなスマホでも、画面いっぱいに美しく表示されます。", "dev_phone": "Androidスマホ", "dev_tab": "Androidタブレット", "story_title": "ストーリー", "story_p1": "誰にでもいるはず。手柄を横取りする上司、笑いが止まらないクラスメイト、抜き打ちテストが大好きな先生。", "story_p2": "主人公には顔も名前もありません。主人公はあなただから。パチンコとアイスでいっぱいの冷凍庫を手に、甘くて無害なリベンジを一発ずつ決めましょう。", "chars_title": "ターゲット紹介", "chars_desc": "8人のキャラクター、8つの世界。それぞれ独自の方法でよけ、隠れ、反撃してきます。", "r_ofisci": "会社員", "r_patron": "社長", "r_gelin": "花嫁", "r_liseli": "高校生", "r_kantin": "食堂の女王", "r_profesor": "教授", "r_hoca": "講師", "r_noel": "ショッピングモールのニセサンタ", "feat_title": "みんなが夢中になる理由", "f1t": "おでこを狙え", "f1d": "引いて、狙って、放す。ど真ん中に当てれば高得点、気分も最高。", "f2t": "スペシャルアイス", "f2d": "チョコボム、フリーザー、レインボースプリット、追尾バニラ。どの味にも特殊能力。", "f3t": "スクープスコープ", "f3d": "コーンレーザー、スクープボウ、スクーパルト。アイスを飛ばすクレイジーな新兵器。", "f4t": "Two Scoop", "f4d": "スマホ1台で2人プレイ。交代で撃って、どっちが名手か決めよう。", "f5t": "40ステージ・8ワールド", "f5d": "オフィス、結婚式、教室、食堂、大学、そしてとても怪しいクリスマス。", "f6t": "フェアで無料", "f6d": "基本無料。広告は報酬のために自分で選んだときだけ表示されます。", "shots_title": "ゲーム画面", "shots_desc": "スマホとタブレットでの実際のゲーム画面。", "two_title": "Two Scoop:どっちが名手?", "two_desc": "スマホを渡して交代で撃ち、ベチャッと具合を比べてチャンピオンを決めよう。登録もオンラインロビーも不要。あなたと友だちとたくさんのアイスだけ。", "cta_title": "Hitscoopを入手", "cta_desc": "App StoreとGoogle Playで無料。", "about_title": "私たちについて", "about_p": "HitscoopはイスタンブールのSwiff Agencyのゲームチーム、Swiff Studioが制作しています。アカウントも個人データもなし、誰でも楽しめるカラフルで優しいゲームを作っています。", "follow": "フォローする", "langs": "18言語", "free": "基本無料", "nav_priv": "プライバシー", "nav_terms": "利用規約", "tag": "ムカついたあの人たちに、アイスを投げつけよう！", "desc": "パチンコにアイスをセットして、おでこを狙って、ベチャッ！上司、花嫁、知ったかぶりの教授、ショッピングモールの偽サンタ…。キャラクターたちはそれぞれのやり方でよけたり、隠れたり、反撃してきたりします。ひとりでも、Two Scoopで友だちと1台のスマホでも遊べます。", "soon": "近日公開"}, "ko": {"nav_game": "게임", "nav_chars": "캐릭터", "nav_about": "회사 소개", "kicker": "아이스크림 복수 파티 게임", "dev_title": "어디서나 플레이", "dev_desc": "iPhone, iPad, Android 휴대폰과 태블릿을 위해 만들었어요. 큰 태블릿이든 작은 휴대폰이든 화면을 꽉 채워요.", "dev_phone": "Android 휴대폰", "dev_tab": "Android 태블릿", "story_title": "우리의 이야기", "story_p1": "누구에게나 그런 사람이 있죠. 공을 가로채는 상사, 웃음을 멈추지 않는 반 친구, 쪽지 시험을 사랑하는 선생님.", "story_p2": "우리 주인공에게는 얼굴도 이름도 없어요. 주인공은 바로 당신이니까요. 새총과 아이스크림이 가득한 냉동고로 달콤하고 무해한 복수를 한 방씩 날려요.", "chars_title": "타깃을 만나 보세요", "chars_desc": "여덟 캐릭터, 여덟 세계. 저마다의 방식으로 피하고, 숨고, 반격해요.", "r_ofisci": "회사원", "r_patron": "사장님", "r_gelin": "신부", "r_liseli": "고등학생", "r_kantin": "매점의 여왕", "r_profesor": "교수", "r_hoca": "강사", "r_noel": "쇼핑몰의 가짜 산타", "feat_title": "플레이어들이 좋아하는 이유", "f1t": "이마를 노려라", "f1d": "당기고, 조준하고, 놓기. 정중앙 명중은 고득점에 쾌감까지.", "f2t": "스페셜 아이스크림", "f2d": "초코 폭탄, 프리저, 레인보우 스플릿, 유도 바닐라 — 맛마다 능력이 있어요.", "f3t": "스쿱 스코프 장비", "f3d": "콘 레이저, 스쿱보우, 스쿱어펄트: 아이스크림을 날리는 기상천외한 방법.", "f4t": "Two Scoop", "f4d": "휴대폰 하나로 두 명이 즐겨요. 번갈아 쏘고 누가 명사수인지 가려요.", "f5t": "40개 레벨, 8개 세계", "f5d": "사무실, 결혼식, 교실, 매점, 대학교, 그리고 아주 수상한 크리스마스.", "f6t": "공정하고 무료", "f6d": "무료로 즐겨요. 광고는 보상을 위해 직접 선택할 때만 나와요.", "shots_title": "플레이 화면", "shots_desc": "휴대폰과 태블릿의 실제 게임 화면.", "two_title": "Two Scoop: 누가 더 잘 맞힐까?", "two_desc": "휴대폰을 넘기고 번갈아 쏘고 철퍼덕 자국을 비교해 챔피언을 정하세요. 가입도 온라인 로비도 없이 당신과 친구, 그리고 아이스크림 가득.", "cta_title": "Hitscoop 받기", "cta_desc": "App Store와 Google Play에서 무료.", "about_title": "회사 소개", "about_p": "Hitscoop은 이스탄불 Swiff Agency의 게임 팀 Swiff Studio가 만들었어요. 계정도 개인 데이터도 없이, 모두를 위한 다채롭고 따뜻한 게임을 만듭니다.", "follow": "팔로우하기", "langs": "18개 언어", "free": "무료", "nav_priv": "개인정보 보호", "nav_terms": "이용약관", "tag": "나를 짜증 나게 했던 모든 사람에게 아이스크림을 던져라!", "desc": "새총에 아이스크림을 장전하고, 이마를 노려서 철퍽! 상사, 신부, 아는 척하는 교수, 쇼핑몰의 가짜 산타… 캐릭터마다 자기 방식으로 피하고, 숨고, 반격합니다. 혼자 하거나 Two Scoop 모드로 친구와 한 휴대폰에서 즐기세요.", "soon": "출시 예정"}, "zh": {"nav_game": "游戏", "nav_chars": "角色", "nav_about": "关于我们", "kicker": "冰淇淋复仇派对游戏", "dev_title": "随处畅玩", "dev_desc": "专为 iPhone、iPad、Android 手机和平板打造。无论大平板还是小手机，每个画面都完美铺满屏幕。", "dev_phone": "Android 手机", "dev_tab": "Android 平板", "story_title": "我们的故事", "story_p1": "每个人身边都有这样的人：抢功劳的老板、笑个不停的同学、最爱突击测验的老师。", "story_p2": "我们的主角没有脸，也没有名字——因为主角就是你。带上弹弓和满满一冰柜的冰淇淋，来一场甜蜜又无害的复仇，一砸一个准。", "chars_title": "认识目标", "chars_desc": "八个角色，八个世界——每个都会用自己的方式闪躲、藏身和反击。", "r_ofisci": "上班族", "r_patron": "老板", "r_gelin": "新娘", "r_liseli": "高中生", "r_kantin": "食堂女王", "r_profesor": "教授", "r_hoca": "讲师", "r_noel": "商场里的假圣诞老人", "feat_title": "玩家为什么喜欢", "f1t": "瞄准额头", "f1d": "拉弓、瞄准、松手。正中靶心得分最高，爽感加倍。", "f2t": "特殊冰淇淋", "f2d": "巧克力炸弹、冰冻弹、彩虹分裂、追踪香草——每种口味都有超能力。", "f3t": "Scoop Scope 装备", "f3d": "甜筒激光、冰淇淋弓、冰淇淋投石车：疯狂的全新发射方式。", "f4t": "Two Scoop", "f4d": "一部手机，两位玩家。轮流发射，看看谁是神射手。", "f5t": "40 个关卡，8 个世界", "f5d": "办公室、婚礼、教室、食堂、大学，还有一个非常可疑的圣诞节。", "f6t": "公平且免费", "f6d": "免费畅玩。只有你主动选择观看换取奖励时才会出现广告。", "shots_title": "游戏实况", "shots_desc": "手机和平板上的真实游戏画面。", "two_title": "Two Scoop：谁的准头更好？", "two_desc": "把手机递过去，轮流发射，比比谁砸得更漂亮，加冕冠军。无需注册，无需联网大厅——只有你、朋友和一大堆冰淇淋。", "cta_title": "获取 Hitscoop", "cta_desc": "在 App Store 和 Google Play 免费下载。", "about_title": "关于我们", "about_p": "Hitscoop 由伊斯坦布尔 Swiff Agency 旗下游戏团队 Swiff Studio 打造。我们为所有人制作多彩而温暖的游戏：无需账号，不收集个人数据，只有快乐。", "follow": "关注我们", "langs": "18 种语言", "free": "免费畅玩", "nav_priv": "隐私", "nav_terms": "使用条款", "tag": "把冰淇淋砸向所有惹过你的人！", "desc": "装好弹弓，瞄准额头，啪！老板、新娘、自以为是的教授、商场里的假圣诞老人……每个角色都会用自己的方式躲闪、藏身和反击。可以一个人玩，也可以在 Two Scoop 模式下和朋友用同一部手机对战。", "soon": "即将推出"}, "ar": {"nav_game": "اللعبة", "nav_chars": "الشخصيات", "nav_about": "من نحن", "kicker": "لعبة الحفلات للانتقام بالآيس كريم", "dev_title": "العب في أي مكان", "dev_desc": "مصممة لأجهزة iPhone وiPad وهواتف وأجهزة Android اللوحية. كل شاشة تملأ جهازك بإتقان، سواء كان جهازًا لوحيًا كبيرًا أو هاتفًا صغيرًا.", "dev_phone": "هاتف Android", "dev_tab": "جهاز Android لوحي", "story_title": "قصتنا", "story_p1": "لكل منا شخص كهذا: المدير الذي ينسب الفضل لنفسه، وزميل الصف الذي لا يتوقف عن الضحك، والمعلمة التي تعشق الاختبارات المفاجئة.", "story_p2": "بطلنا بلا وجه ولا اسم، لأن البطل هو أنت. بمقلاع وثلاجة مليئة بالآيس كريم، تأخذ انتقامك الحلو وغير المؤذي، ضربة بعد ضربة.", "chars_title": "تعرّف على الأهداف", "chars_desc": "ثماني شخصيات وثمانية عوالم، وكل منها يراوغ ويختبئ ويرد بطريقته الخاصة.", "r_ofisci": "موظف مكتب", "r_patron": "المدير", "r_gelin": "العروس", "r_liseli": "طالب ثانوي", "r_kantin": "ملكة المقصف", "r_profesor": "البروفيسور", "r_hoca": "المحاضِرة", "r_noel": "بابا نويل مزيف في المول", "feat_title": "لماذا يحبها اللاعبون", "f1t": "صوّب على الجبهة", "f1d": "اسحب، صوّب، أطلق. الإصابة في المنتصف تمنحك نقاطًا كبيرة ومتعة أكبر.", "f2t": "آيس كريم خاص", "f2d": "قنبلة الشوكولاتة، المجمِّد، انقسام قوس قزح، الفانيليا الموجَّهة — لكل نكهة قوة.", "f3t": "أدوات Scoop Scope", "f3d": "ليزر البسكويت، Scoopbow، Scoopapult: طرق جديدة ومجنونة لإطلاق الآيس كريم.", "f4t": "Two Scoop", "f4d": "هاتف واحد ولاعبان. تناوبا على الرمي واكتشفا من الأمهر.", "f5t": "40 مستوى و8 عوالم", "f5d": "المكتب، الزفاف، الفصل، المقصف، الجامعة، وعيد ميلاد مريب جدًا.", "f6t": "عادلة ومجانية", "f6d": "مجانية. لا تظهر الإعلانات إلا عندما تختار مشاهدة إعلان مقابل مكافأة.", "shots_title": "شاهدها أثناء اللعب", "shots_desc": "لقطات حقيقية من اللعبة على الهاتف والجهاز اللوحي.", "two_title": "Two Scoop: من الأمهر في التصويب؟", "two_desc": "مرّر الهاتف، تناوبا على الرمي، قارنا الضربات وتوّجا البطل. بلا تسجيل وبلا ردهة عبر الإنترنت — أنت وصديقك والكثير من الآيس كريم.", "cta_title": "احصل على Hitscoop", "cta_desc": "مجانًا على App Store وGoogle Play.", "about_title": "من نحن", "about_p": "Hitscoop من تطوير Swiff Studio، فريق الألعاب في Swiff Agency بإسطنبول. نصنع ألعابًا ملوّنة وطيبة للجميع: بلا حسابات وبلا بيانات شخصية، فقط متعة.", "follow": "تابعنا", "langs": "18 لغة", "free": "مجانية", "nav_priv": "الخصوصية", "nav_terms": "شروط الاستخدام", "tag": "ارمِ الآيس كريم على كل من أزعجك يومًا!", "desc": "جهّز المقلاع، صوّب نحو الجبهة… وطراخ! المدير، العروس، الأستاذ الذي يعرف كل شيء، بابا نويل المزيّف في المول… كل شخصية تراوغ وتختبئ وتردّ بطريقتها. العب وحدك أو مع صديق على الهاتف نفسه في وضع Two Scoop.", "soon": "قريبًا"}},PT={"en": "Hitscoop — Terms of Use", "tr": "Hitscoop — Kullanım Koşulları", "de": "Hitscoop — Nutzungsbedingungen", "fr": "Hitscoop — Conditions d'utilisation", "es": "Hitscoop — Condiciones de uso", "pt": "Hitscoop — Termos de uso", "it": "Hitscoop — Termini d'uso", "nl": "Hitscoop — Gebruiksvoorwaarden", "pl": "Hitscoop — Warunki korzystania", "ro": "Hitscoop — Termeni de utilizare", "sq": "Hitscoop — Kushtet e përdorimit", "id": "Hitscoop — Ketentuan Penggunaan", "ru": "Hitscoop — Условия использования", "uk": "Hitscoop — Умови використання", "ja": "Hitscoop — 利用規約", "ko": "Hitscoop — 이용약관", "zh": "Hitscoop — 使用条款", "ar": "Hitscoop — شروط الاستخدام"},BAD={"en": "gp-en.svg", "tr": "gp-tr.svg", "de": "gp-de.png", "fr": "gp-fr.png", "es": "gp-es.png", "pt": "gp-pt.png", "it": "gp-it.png", "nl": "gp-nl.png", "pl": "gp-pl.png", "ro": "gp-ro.png", "sq": "gp-sq.png", "id": "gp-id.png", "ru": "gp-ru.png", "uk": "gp-en.svg", "ja": "gp-ja.png", "ko": "gp-ko.png", "zh": "gp-zh.png", "ar": "gp-ar.png"},RTL={ar:1};
+function setLang(l){ if(!M[l]) l="en"; const d=document.documentElement; d.lang=l; d.dir=RTL[l]?"rtl":"ltr";
+ document.querySelectorAll("[data-k]").forEach(e=>{const v=M[l][e.dataset.k]; if(v!=null) e.textContent=v;});
+ document.querySelectorAll("[data-lang]").forEach(a=>a.hidden=a.dataset.lang!==l);
+ document.querySelectorAll("img[data-gp]").forEach(i=>i.src="badges/"+BAD[l]);
+ document.title=PT[l]; const s=document.getElementById("langSel"); if(s) s.value=l; try{localStorage.setItem("hs-lang",l)}catch(e){} }
+document.getElementById("langSel").addEventListener("change",e=>setLang(e.target.value));
+function detect(){ const q=new URLSearchParams(location.search).get("lang"); if(q&&M[q]) return q; const ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"en"]); for(const x of ls){ const k=String(x).toLowerCase().split(/[-_]/)[0]; if(M[k]) return k; } return "en"; }
+let p=null; try{p=localStorage.getItem("hs-lang")}catch(e){}
+const q0=new URLSearchParams(location.search).get("lang");
+setLang(q0&&M[q0]?q0:(p&&M[p]?p:detect()));
+const hdr=document.getElementById("top"); const onS=()=>hdr.classList.add("on"); addEventListener("scroll",onS,{passive:true}); onS();
+if("IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".rv").forEach(e=>io.observe(e));}else document.querySelectorAll(".rv").forEach(e=>e.classList.add("in"));
+
+</script>
+</body>
+</html>
