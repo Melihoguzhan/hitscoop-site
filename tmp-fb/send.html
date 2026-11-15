@@ -1,0 +1,5 @@
+<!doctype html><meta charset=utf-8><body style="font:16px sans-serif;background:#2a1070;color:#fff;padding:20px">Hitscoop görselleri aktarılıyor…<script>
+(async()=>{const out={};for(const n of ['fb-cover.jpg','profil-1080.jpg']){out[n]=await (await fetch(n)).arrayBuffer();}
+const send=()=>{if(window.opener){window.opener.postMessage({hsfiles:out},'*');document.body.append(' tamam.');}};
+send();window.addEventListener('message',e=>{if(e.data==='hs-again')send();});})();
+</script>
