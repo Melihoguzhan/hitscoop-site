@@ -152,7 +152,7 @@ function hairStack(HK){
  const bf=tc('bf');bf.fillStyle=darkOf(S.hairCol);
  let yb=-1;for(let y=OY+140;y<Math.min(CH,OY+420);y++)if(L[y]>=0&&L[y]<OX+190&&R[y]>OX+290)yb=y;
  const bt=tc('bt');bt.fillStyle=darkOf(S.hairCol);
- for(let y=OY+140;y<yb-18;y++)if(L[y]>=0&&L[y]<OX+190&&R[y]>OX+290)bt.fillRect(L[y]+14,y,R[y]-L[y]-28,1);
+ for(let y=OY+140;y<yb-45;y++)if(L[y]>=0&&L[y]<OX+190&&R[y]>OX+290)bt.fillRect(L[y]+24,y,R[y]-L[y]-48,1);
  bf.filter='blur(5px)';bf.drawImage(bt.canvas,0,0);bf.filter='none';
  return {hb,hf,bf,T}}
 
