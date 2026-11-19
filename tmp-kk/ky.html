@@ -131,15 +131,38 @@ const off=document.createElement('canvas');off.width=CW;off.height=CH;const oc=o
 const cv=$('cv'),cc=cv.getContext('2d');const out=cc.createImageData(CW,CH);
 let pend=false;function q(){if(!pend){pend=true;requestAnimationFrame(()=>{pend=false;draw()})}}
 const ANCH={hair:[240,90],biyik:[238,330],gozluk:[236,222]};
-function layer(src,o,key){const f=S.fit[o],[ax,ay]=ANCH[o];oc.save();oc.translate(OX+ax+f.x,OY+ay+f.y);oc.rotate(f.r);oc.scale(f.s*f.sx,f.s*f.sy);oc.translate(-ax-OX,-ay-OY);const m=META(key);oc.drawImage(src,OX+m[0],OY+m[1],m[2],m[3]);oc.restore()}
+function layer(src,o,key,cx){cx=cx||oc;const f=S.fit[o],[ax,ay]=ANCH[o];cx.save();cx.translate(OX+ax+f.x,OY+ay+f.y);cx.rotate(f.r);cx.scale(f.s*f.sx,f.s*f.sy);cx.translate(-ax-OX,-ay-OY);const m=META(key);cx.drawImage(src,OX+m[0],OY+m[1],m[2],m[3]);cx.restore()}
+const TMP={};function tc(n){if(!TMP[n]){const c=document.createElement('canvas');c.width=CW;c.height=CH;TMP[n]=c.getContext('2d',{willReadFrequently:true})}const x=TMP[n];x.setTransform(1,0,0,1,0,0);x.globalCompositeOperation='source-over';x.globalAlpha=1;x.clearRect(0,0,CW,CH);return x}
+function darkOf(col){const m=hex(col),l=.3*m[0]+.59*m[1]+.11*m[2],k=l>200?.45:.3;return 'rgb('+m.map(v=>Math.round(v*k)).join(',')+')'}
+function hairStack(HK){
+ const hb=tc('hb'),hf=tc('hf');layer(recolor(HK+'_back',S.hairCol),'hair',HK+'_back',hb);layer(recolor(HK,S.hairCol),'hair',HK,hf);
+ // yüzü koru: kaş çizgisinin altında, yüz ovali içinde ön saç olmaz (yumuşak kenar)
+ hf.save();hf.globalCompositeOperation='destination-out';
+ const g=hf.createRadialGradient(OX+236,OY+285,10,OX+236,OY+285,1);hf.restore();
+ const fd=hf.getImageData(0,0,CW,CH),F=fd.data;
+ for(let y=OY+175;y<OY+470;y++)for(let x=OX+80;x<OX+400;x++){const nx=(x-OX-237)/138,ny=(y-OY-300)/150,d=nx*nx+ny*ny;if(d<1){const top=Math.min(1,(y-OY-175)/30),k=Math.min(1,(1-d)/0.18)*top;const i=(y*CW+x)*4+3;F[i]=F[i]*(1-k)}}
+ hf.putImageData(fd,0,0);
+ const bd=hb.getImageData(0,0,CW,CH).data;
+ // birleşik saç maskesi: satır başı/sonu ve sütun tepesi
+ const L=new Int32Array(CH).fill(-1),R=new Int32Array(CH).fill(-1),T=new Int32Array(CW).fill(-1);
+ for(let y=0;y<CH;y++)for(let x=0;x<CW;x++){const i=(y*CW+x)*4+3;if(F[i]>110||bd[i]>110){if(L[y]<0)L[y]=x;R[y]=x;if(T[x]<0)T[x]=y}}
+ // arka dolgu: saç kafanın iki yanında da varsa aradaki boşluk saç içi rengiyle dolar (afro/küt delikleri)
+ const bf=tc('bf');bf.fillStyle=darkOf(S.hairCol);
+ for(let y=0;y<Math.min(CH,OY+400);y++)if(L[y]>=0&&L[y]<OX+190&&R[y]>OX+290)bf.fillRect(L[y]+3,y,R[y]-L[y]-6,1);
+ return {hb,hf,bf,T}}
+
 function sm(e0,e1,x){const t=Math.min(1,Math.max(0,(x-e0)/(e1-e0)));return t*t*(3-2*t)}
 function draw(){
  oc.clearRect(0,0,CW,CH);const hk=S.sex==='kadin'?'kadin':(S.eye==='mono'&&S.expr==='base')?'mono':S.expr;
  const HK=S.hair?S.hair+(S.sex==='kadin'?'_K':'_E'):'';   // saçın bu kafaya uyarlanmış hali
- if(HK)layer(recolor(HK+'_back',S.hairCol),'hair',HK+'_back');   // arka saç: kafanın arkasında, içi dolu
- oc.drawImage(img['H_'+hk+'_L'],OX,OY,W,H);if(S.skin>0){oc.globalAlpha=S.skin;oc.drawImage(img['H_'+hk+'_D'],OX,OY,W,H);oc.globalAlpha=1}
+ const HS=HK?hairStack(HK):null;
+ if(HS){oc.drawImage(HS.bf.canvas,0,0);oc.drawImage(HS.hb.canvas,0,0)}   // arka dolgu + arka saç
+ const hd=tc('hd');hd.drawImage(img['H_'+hk+'_L'],OX,OY,W,H);if(S.skin>0){hd.globalAlpha=S.skin;hd.drawImage(img['H_'+hk+'_D'],OX,OY,W,H);hd.globalAlpha=1}
+ if(HS){const T=HS.T;hd.globalCompositeOperation='destination-out';hd.fillStyle='#000';   // saçın üstünden taşan kafa tepesi kesilir
+  for(let x=0;x<CW;x++){const t=T[x];if(t>0&&t<OY+170)hd.fillRect(x,0,1,t+2)}hd.globalCompositeOperation='source-over'}
+ oc.drawImage(hd.canvas,0,0);
  if(S.biyik)layer(recolor(S.biyik,S.biyikCol),'biyik',S.biyik);
- if(HK)layer(recolor(HK,S.hairCol),'hair',HK);
+ if(HS)oc.drawImage(HS.hf.canvas,0,0);
  const src=oc.getImageData(0,0,CW,CH).data,o=out.data,v=S.v;
  const B=[];const eb=(cx,cy,rx,ry,s,mx=1,my=1)=>{if(s)B.push([cx,cy,rx,ry,s,mx,my])};
  eb(238,272,78,72,v.burun*0.7);
