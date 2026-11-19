@@ -52,6 +52,8 @@ const F0=()=>({x:0,y:0,s:1,sx:1,sy:1,r:0});
 const S={sex:'erkek',expr:'base',skin:0,eye:'yuvarlak',hair:'G3_kisa',hairCol:'#26211f',biyik:'',biyikCol:'#26211f',gozluk:false,gozlukCol:'#D62F2F',
  v:{alin:0,kasY:0,kasK:0,goz:0,burun:0,yanak:0,agiz:0,ceneU:0,ceneG:0,kulak:0},
  fit:{hair:F0(),biyik:F0(),gozluk:F0()}};
+const HAIR_E=[['','Kel'],['G3_kisa','Kısa düz'],['G3_afro3','Afro']];
+const HAIR_K=[['G3_bob3','Küt (omuz boyu)'],['G3_atk3','At kuyruğu'],['G3_afro3','Afro'],['G3_kisa','Kısa'],['','Kel']];
 const HAIRC=[['#26211f','Siyah'],['#4a2e1f','Koyu kahve'],['#7a4a2a','Kahve'],['#b4441e','Kızıl'],['#d9a74a','Sarı'],['#efe3c4','Platin'],['#9a9a9a','Kır'],['#f2f2f2','Beyaz'],['#e85aa0','Pembe'],['#3a7be0','Mavi'],['#3faa5a','Yeşil']];
 const GLC=[['#1d1d1d','Siyah'],['#D62F2F','Kırmızı'],['#2F86F0','Mavi'],['#C9A227','Altın'],['#f4f4f4','Beyaz'],['#EC4C9C','Pembe'],['#3FAE26','Yeşil'],['#8a5a2b','Kahve']];
 // sekmeler: her biri kendi seçimleri + renk + parmak davranışı
@@ -92,7 +94,7 @@ function panel(){const p=$('panel');p.innerHTML='';
   if(tab.k==='kas')p.append(mk('p','note','Kaş rengi ve kaş şekilleri üretimde ayrı parça olarak gelecek.'));
   if(tab.k==='goz')p.append(mk('p','note','Deneme: tek kapaklı göz şimdilik sadece Normal ifadede. Üretimde her göz şekli her ifadede olacak; göz rengi de eklenecek.'));
   return}
- if(tab.obj==='hair'){p.append(chips('Saç modeli',[['','Kel'],['G3_kisa','Kısa düz'],['G3_afro3','Afro'],['G3_bob3','Küt (omuz boyu)'],['G3_atk3','At kuyruğu']],()=>S.hair,k=>S.hair=k));
+ if(tab.obj==='hair'){p.append(chips('Saç modeli',S.sex==='kadin'?HAIR_K:HAIR_E,()=>S.hair,k=>S.hair=k));
   if(S.hair){p.append(swatches('Saç rengi',HAIRC,()=>S.hairCol,c=>S.hairCol=c));p.append(fitUI('hair'))}}
  if(tab.obj==='biyik'){p.append(chips('Model',[['','Yok'],['G3_vik2_E','Viking sakalı']],()=>S.biyik,k=>S.biyik=k));
   if(S.biyik){p.append(swatches('Renk',HAIRC,()=>S.biyikCol,c=>S.biyikCol=c));p.append(fitUI('biyik'))}}
@@ -133,14 +135,14 @@ let pend=false;function q(){if(!pend){pend=true;requestAnimationFrame(()=>{pend=
 const ANCH={hair:[240,90],biyik:[238,330],gozluk:[236,222]};
 function layer(src,o,key,cx){cx=cx||oc;const f=S.fit[o],[ax,ay]=ANCH[o];cx.save();cx.translate(OX+ax+f.x,OY+ay+f.y);cx.rotate(f.r);cx.scale(f.s*f.sx,f.s*f.sy);cx.translate(-ax-OX,-ay-OY);const m=META(key);cx.drawImage(src,OX+m[0],OY+m[1],m[2],m[3]);cx.restore()}
 const TMP={};function tc(n){if(!TMP[n]){const c=document.createElement('canvas');c.width=CW;c.height=CH;TMP[n]=c.getContext('2d',{willReadFrequently:true})}const x=TMP[n];x.setTransform(1,0,0,1,0,0);x.globalCompositeOperation='source-over';x.globalAlpha=1;x.clearRect(0,0,CW,CH);return x}
-function darkOf(col){const m=hex(col),l=.3*m[0]+.59*m[1]+.11*m[2],k=l>200?.45:.3;return 'rgb('+m.map(v=>Math.round(v*k)).join(',')+')'}
+function darkOf(col){const m=hex(col),l=.3*m[0]+.59*m[1]+.11*m[2],k=l>150?.62:l>90?.45:.3;return 'rgb('+m.map(v=>Math.round(v*k)).join(',')+')'}
 function hairStack(HK){
  const hb=tc('hb'),hf=tc('hf');layer(recolor(HK+'_back',S.hairCol),'hair',HK+'_back',hb);layer(recolor(HK,S.hairCol),'hair',HK,hf);
  // yüzü koru: kaş çizgisinin altında, yüz ovali içinde ön saç olmaz (yumuşak kenar)
  hf.save();hf.globalCompositeOperation='destination-out';
  const g=hf.createRadialGradient(OX+236,OY+285,10,OX+236,OY+285,1);hf.restore();
  const fd=hf.getImageData(0,0,CW,CH),F=fd.data;
- if(/bob|uzun/.test(HK))for(let y=OY+160;y<OY+300;y++)for(let x=OX+60;x<OX+420;x++){const nx=(x-OX-236)/152,ny=(y-OY-228)/62,d=nx*nx+ny*ny;if(d<1){const top=1,k=Math.min(1,(1-d)/0.08)*top;const i=(y*CW+x)*4+3;F[i]=F[i]*(1-k)}}
+ if(false)for(let y=OY+160;y<OY+300;y++)for(let x=OX+60;x<OX+420;x++){const nx=(x-OX-236)/152,ny=(y-OY-228)/62,d=nx*nx+ny*ny;if(d<1){const top=1,k=Math.min(1,(1-d)/0.08)*top;const i=(y*CW+x)*4+3;F[i]=F[i]*(1-k)}}
  hf.putImageData(fd,0,0);
  const bd=hb.getImageData(0,0,CW,CH).data;
  // birleşik saç maskesi: satır başı/sonu ve sütun tepesi
@@ -211,7 +213,7 @@ stg.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;pts.set(e
 stg.addEventListener('wheel',e=>{if(!objOn())return;e.preventDefault();const f=S.fit[tab.obj];f.s=Math.min(2,Math.max(.4,f.s*(e.deltaY<0?1.04:0.96)));q()},{passive:false});
 $('rst').onclick=()=>{for(const k in S.v)S.v[k]=0;S.fit={hair:F0(),biyik:F0(),gozluk:F0()};panel();q()};
 $('rnd').onclick=()=>{for(const k in S.v)S.v[k]=Math.round((Math.random()*2-1)*85)/100;
- S.sex=Math.random()<.5?'kadin':'erkek';S.hair=['G3_bob3','G3_atk3','G3_afro3','G3_kisa',''][Math.random()*5|0];S.biyik=S.sex==='erkek'&&Math.random()<.5?'G3_vik2_E':'';S.gozluk=Math.random()<.4;S.skin=Math.random();S.eye=Math.random()<.5?'mono':'yuvarlak';
+ S.sex=Math.random()<.5?'kadin':'erkek';{const L=S.sex==='kadin'?HAIR_K:HAIR_E;S.hair=L[Math.random()*L.length|0][0]}S.biyik=S.sex==='erkek'&&Math.random()<.5?'G3_vik2_E':'';S.gozluk=Math.random()<.4;S.skin=Math.random();S.eye=Math.random()<.5?'mono':'yuvarlak';
  S.hairCol=HAIRC[Math.random()*HAIRC.length|0][0];S.biyikCol=S.hairCol;if(!S.hairCol){S.hairCol='#26211f';S.biyikCol=S.hairCol}S.gozlukCol=GLC[Math.random()*GLC.length|0][0];panel();q()};
 tabsUI();exprUI();panel();say();
 
