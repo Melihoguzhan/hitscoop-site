@@ -188,4 +188,6 @@ $('rnd').onclick=()=>{for(const k in S.v)S.v[k]=Math.round((Math.random()*2-1)*8
  S.sex=Math.random()<.5?'kadin':'erkek';S.hair=['G3_bob3','G3_atk3','G3_afro3','G3_kisa',''][Math.random()*5|0];S.biyik=S.sex==='erkek'&&Math.random()<.5?'G3_vik2_E':'';S.gozluk=Math.random()<.4;S.skin=Math.random();S.eye=Math.random()<.5?'mono':'yuvarlak';
  S.hairCol=HAIRC[Math.random()*HAIRC.length|0][0];S.biyikCol=S.hairCol;if(!S.hairCol){S.hairCol='#26211f';S.biyikCol=S.hairCol}S.gozlukCol=GLC[Math.random()*GLC.length|0][0];panel();q()};
 tabsUI();exprUI();panel();say();
+
+;window.__S=S;window.__draw=draw;
 </script></body></html>
