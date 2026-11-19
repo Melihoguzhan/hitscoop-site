@@ -140,7 +140,7 @@ function hairStack(HK){
  hf.save();hf.globalCompositeOperation='destination-out';
  const g=hf.createRadialGradient(OX+236,OY+285,10,OX+236,OY+285,1);hf.restore();
  const fd=hf.getImageData(0,0,CW,CH),F=fd.data;
- for(let y=OY+175;y<OY+470;y++)for(let x=OX+80;x<OX+400;x++){const nx=(x-OX-237)/138,ny=(y-OY-300)/150,d=nx*nx+ny*ny;if(d<1){const top=Math.min(1,(y-OY-175)/30),k=Math.min(1,(1-d)/0.18)*top;const i=(y*CW+x)*4+3;F[i]=F[i]*(1-k)}}
+ for(let y=OY+160;y<OY+300;y++)for(let x=OX+60;x<OX+420;x++){const nx=(x-OX-236)/152,ny=(y-OY-228)/62,d=nx*nx+ny*ny;if(d<1){const top=1,k=Math.min(1,(1-d)/0.25)*top;const i=(y*CW+x)*4+3;F[i]=F[i]*(1-k)}}
  hf.putImageData(fd,0,0);
  const bd=hb.getImageData(0,0,CW,CH).data;
  // birleşik saç maskesi: satır başı/sonu ve sütun tepesi
