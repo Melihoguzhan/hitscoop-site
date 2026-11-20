@@ -160,11 +160,14 @@ footer.f .copy{grid-column:1/-1;border-top:2px solid rgba(255,255,255,.12);paddi
 /* hukuk sayfaları */
 .doc{padding:110px 0 30px}
 .doc .w{width:min(900px,100% - 24px)}
-.doc h1{font:700 clamp(34px,5vw,48px)/1.1 Fredoka,"Baloo 2",sans-serif;margin:0 0 4px;color:var(--ink)}
+.doc h1{font:700 clamp(30px,5vw,48px)/1.1 Fredoka,"Baloo 2",sans-serif;margin:0 0 4px;color:var(--ink);overflow-wrap:anywhere;hyphens:auto}
 .doc h2{font:700 24px/1.2 Fredoka,"Baloo 2",sans-serif;margin:26px 0 4px;color:var(--ink)}
 .doc p,.doc li{color:var(--soft)} .doc ul{padding-inline-start:22px}
 .doc .date{font-size:15px;color:var(--mute)}
-.doc a{color:#C2187A;font-weight:800}
+.doc .note{background:#FFF1D6;border-radius:14px;padding:10px 14px;color:var(--ink)}
+.doc hr{border:0;border-top:2px dashed #E2D3F5;margin:28px 0 10px}
+.doc .contact{font-size:15px;margin-top:26px}
+.doc a{color:#C2187A;font-weight:800;overflow-wrap:anywhere}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 @media (max-width:980px){
@@ -187,345 +190,813 @@ footer.f .copy{grid-column:1/-1;border-top:2px solid rgba(255,255,255,.12);paddi
 <header class="top on" id="top"><div class="w"><a class="home" href="./" aria-label="Hitscoop"><img src="img/logo-hd.webp" alt="Hitscoop" width="1400" height="715"></a><nav><a class="chip nl" href="./#game" data-k="nav_game">The game</a><a class="chip nl" href="./#characters" data-k="nav_chars">Characters</a><a class="chip nl" href="./#about" data-k="nav_about">About us</a><label class="lang"><select id="langSel" aria-label="Language"><option value="en">English</option><option value="tr">Türkçe</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="pt">Português</option><option value="it">Italiano</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Română</option><option value="sq">Shqip</option><option value="id">Bahasa Indonesia</option><option value="ru">Русский</option><option value="uk">Українська</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh">简体中文</option><option value="ar">العربية</option></select></label></nav></div></header>
 <main class="doc"><div class="w"><div class="pn"><article data-lang="en" lang="en">
 <h1>Privacy</h1>
-<p class="date">Last updated: 14 November 2026</p>
-<p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses.</p>
-<h2>In short</h2>
-<ul><li>No account, no sign-up: the game never asks for your name, email or photo.</li><li>We have no servers and we do not collect any personal information ourselves.</li><li>The game is free and shows ads served by Google AdMob.</li></ul>
-<h2>What stays on your device</h2>
-<p>Your progress, stars, Scoops, special ice creams and settings are saved only on your device. Deleting the game deletes them too.</p>
-<h2>Ads</h2>
-<ul><li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>.</li><li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form. You can change your choice at any time in Settings → Ad Permissions.</li><li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalized ones.</li></ul>
-<h2>Purchases</h2>
-<p>There are no real-money purchases in the game. Scoops are earned by playing, with the daily gift or by choosing to watch an ad.</p>
-<h2>Children</h2>
+<p class="date">Last updated: 20 November 2026</p>
+<p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
 <p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
-<h2>This website</h2>
-<p>hitscoop.com uses no cookies, has no forms and does not track visitors.</p>
-<h2>Changes and contact</h2>
-<ul><li>If this policy changes, we update this page and its date. Questions: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Publisher: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="tr" lang="tr">
 <h1>Gizlilik</h1>
-<p class="date">Son güncelleme: 14 Kasım 2026</p>
-<p>Hitscoop, Swiff Studio'nun bir oyunudur. Bu sayfa, oyunun hangi bilgileri kullandığını açıkça anlatır.</p>
-<h2>Kısaca</h2>
-<ul><li>Hesap yok, kayıt yok: oyun adını, e-postanı ya da fotoğrafını hiçbir zaman sormaz.</li><li>Bizim bir sunucumuz yok ve kendimiz hiçbir kişisel bilgi toplamıyoruz.</li><li>Oyun ücretsizdir ve Google AdMob'un sunduğu reklamları gösterir.</li></ul>
-<h2>Cihazında kalanlar</h2>
-<p>İlerlemen, yıldızların, Scoop'ların, özel dondurmaların ve ayarların yalnızca cihazında saklanır. Oyunu silersen bunlar da silinir.</p>
-<h2>Reklamlar</h2>
-<ul><li>Reklamları Google AdMob gösterir. Google, reklamları göstermek, ölçmek ve sahtekârlığı önlemek için cihazının reklam kimliğini, IP adresini, cihaz ve uygulama bilgilerini ve reklamlarla etkileşimini kullanabilir. Ayrıntılı bilgi: <a href="https://policies.google.com/technologies/partner-sites">Google, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullanır</a>.</li><li>Avrupa Ekonomik Alanı, Birleşik Krallık ya da İsviçre'deysen oyun reklam iznini Google'ın izin formuyla sorar. Seçimini istediğin zaman Ayarlar → Reklam İzinleri'nden değiştirebilirsin.</li><li>iPhone ve iPad'de oyun takip izni ister. İzin vermezsen yine reklam görürsün, yalnızca sana daha az özel olurlar.</li></ul>
-<h2>Satın almalar</h2>
-<p>Oyunda gerçek parayla satın alma yoktur. Scoop'lar oynayarak, günlük hediyeyle ya da isteğe bağlı reklam izleyerek kazanılır.</p>
-<h2>Çocuklar</h2>
-<p>Hitscoop 12 yaş ve üzeri içindir; 13 yaşından küçük çocuklara yönelik değildir. Çocuklardan bilerek bilgi toplamayız.</p>
-<h2>Bu web sitesi</h2>
-<p>hitscoop.com çerez kullanmaz, form içermez ve ziyaretçi takibi yapmaz.</p>
-<h2>Değişiklikler ve iletişim</h2>
-<ul><li>Bu politika değişirse bu sayfayı ve tarihini güncelleriz. Sorular için: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Yayıncı: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Son güncelleme: 20 Kasım 2026</p>
+<p>Hitscoop bir Swiff Studio oyunudur. Bu sayfa oyunun hangi bilgileri kullandığını açıkça anlatır. Veri sorumlusu: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / İstanbul, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. Kısaca</h2>
+<ul>
+<li>Hitscoop'ta ayrı bir hesap ya da üyelik yok; oyun adını, e-postanı ya da fotoğrafını istemez.</li>
+<li>Bizim bir sunucumuz yok; senin hakkında kişisel veri toplamıyor ve saklamıyoruz.</li>
+<li>Oyun ücretsizdir ve Google AdMob reklamları gösterir. İstersen Scoop paketi satın alabilirsin; ödemeyi Apple ya da Google alır.</li>
+</ul>
+<h2>2. Cihazında kalanlar</h2>
+<p>İlerlemen, yıldızların, Scoop'ların, özel dondurmaların, ayarların, Two Scoop'ta yazdığın isimler ve tamamlanmış satın almaların işlem kimlikleri (aynı ödemenin iki kez verilmemesi için) yalnızca cihazında saklanır. Uygulamayı sildiğinde bunlar da silinir.</p>
+<h2>3. Hesap bağlantısı ve bulut yedeği</h2>
+<ul>
+<li>Satın almadan önce, istersen de Ayarlar'dan, Android'de Google Play Oyunlar, iPhone ve iPad'de iCloud hesabını oyuna bağlarsın. Şifre ya da e-posta bize gelmez; girişi Google ya da Apple yapar.</li>
+<li>Bağlıysan oyun kaydının bir kopyası (ilerleme, Scoop, öğeler, ayarlar) Google Play Oyunlar'ın Kayıtlı Oyunlar alanında ya da iCloud'da senin hesabında saklanır. Bu kopyayı biz göremeyiz; Google ve Apple kendi gizlilik kurallarına göre işler.</li>
+<li>Google Play Oyunlar'a bağlandığında Google, oyunun senin oyuncu kimliğini ve oyuncu adını bilmesine izin verir; oyun bunları yalnızca yedeği bulmak için cihazda kullanır, bize göndermez.</li>
+<li>Yedeği silmek için: Android'de Google Play Oyunlar ayarlarından Hitscoop verilerini, iPhone'da Ayarlar → [adın] → iCloud → Hesap Depolama Alanını Yönet bölümünden Hitscoop'u silebilirsin.</li>
+</ul>
+<h2>4. Satın almalar</h2>
+<p>Scoop paketlerinin ödemesini Apple App Store ya da Google Play alır. Kart ve ödeme bilgilerin bize hiç gelmez. Oyun, mağazadan yalnızca hangi paketi aldığını ve bir işlem kimliğini öğrenir; bunları Scoop'u teslim etmek ve aynı ödemeyi iki kez vermemek için cihazında kullanır. Mağazalar satın alma geçmişini kendi kurallarına göre saklar.</p>
+<h2>5. Reklamlar</h2>
+<ul>
+<li>Reklamları Google AdMob gösterir. Reklamı göstermek, ölçmek ve dolandırıcılığı önlemek için Google cihazının reklam kimliğini, IP adresini, cihaz ve uygulama bilgilerini ve reklamlarla etkileşimini kullanabilir. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>Avrupa Ekonomik Alanı, Birleşik Krallık ya da İsviçre'deysen oyun Google'ın izin formuyla reklam iznini sorar; kararını istediğin an Ayarlar → Hakkında → Reklam İzinleri'nden değiştirebilirsin.</li>
+<li>iPhone ve iPad'de oyun takip izni ister. İzin vermezsen de reklam görürsün, yalnızca daha az kişiselleştirilmiş olur.</li>
+</ul>
+<h2>6. Çocuklar</h2>
+<p>Hitscoop 12 yaş ve üzeri içindir ve 13 yaşın altındaki çocuklara yönelik değildir. Çocuklardan bilerek bilgi toplamayız.</p>
+<h2>7. Haklar ve iletişim</h2>
+<p>KVKK, GDPR ve benzeri yasalardan doğan bilgi alma, düzeltme, silme ve itiraz hakların vardır. Bizde senin hakkında kişisel veri tutulmadığı için çoğu talep cihazındaki verileri (uygulamayı silerek) ve bulut yedeğini (yukarıdaki adımlarla) silmenle karşılanır. Google ve Apple'ın tuttuğu veriler için onların gizlilik merkezlerine başvurabilirsin. Sorular ve talepler: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. Kendi ülkendeki veri koruma kurumuna şikâyet hakkın saklıdır.</p>
+<h2>8. Bu web sitesi</h2>
+<p>hitscoop.com çerez kullanmaz, form içermez ve ziyaretçileri izlemez. Her web isteğinde olduğu gibi barındırıcı IP adresini teknik olarak görür; biz bu bilgiyi toplamaz ve kullanmayız.</p>
+<h2>9. Değişiklikler</h2>
+<p>Bu metin değişirse bu sayfayı ve tarihini güncelleriz; önemli değişiklikleri oyunda da duyururuz.</p>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="de" lang="de">
 <h1>Datenschutz</h1>
-<p class="date">Zuletzt aktualisiert: 14. November 2026</p>
-<p>Hitscoop ist ein Spiel von Swiff Studio. Diese Seite erklärt verständlich, welche Informationen das Spiel verwendet.</p>
-<h2>Kurz gesagt</h2>
-<ul><li>Kein Konto, keine Anmeldung: Das Spiel fragt nie nach deinem Namen, deiner E-Mail oder einem Foto.</li><li>Wir haben keine Server und erheben selbst keine personenbezogenen Daten.</li><li>Das Spiel ist kostenlos und zeigt Werbung von Google AdMob.</li></ul>
-<h2>Was auf deinem Gerät bleibt</h2>
-<p>Fortschritt, Sterne, Scoops, Spezial-Eis und Einstellungen werden nur auf deinem Gerät gespeichert. Wenn du das Spiel löschst, werden sie ebenfalls gelöscht.</p>
-<h2>Werbung</h2>
-<ul><li>Die Werbung wird von Google AdMob angezeigt. Um Anzeigen auszuliefern, zu messen und Betrug zu verhindern, kann Google die Werbe-ID deines Geräts, deine IP-Adresse, Geräte- und App-Informationen sowie deine Interaktionen mit Anzeigen nutzen. Mehr dazu: <a href="https://policies.google.com/technologies/partner-sites">Wie Google Daten aus Apps verwendet, die seine Dienste nutzen</a>.</li><li>Wenn du dich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz befindest, fragt das Spiel über Googles Einwilligungsformular nach deiner Einwilligung. Du kannst deine Wahl jederzeit unter Einstellungen → Werbe-Einstellungen ändern.</li><li>Auf iPhone und iPad fragt das Spiel nach der Tracking-Erlaubnis. Wenn du sie nicht erteilst, siehst du trotzdem Werbung, nur weniger personalisiert.</li></ul>
-<h2>Käufe</h2>
-<p>Im Spiel gibt es keine Käufe mit echtem Geld. Scoops verdienst du durch Spielen, mit dem täglichen Geschenk oder freiwillig durch Ansehen einer Werbung.</p>
-<h2>Kinder</h2>
-<p>Hitscoop ist für Personen ab 12 Jahren gedacht und richtet sich nicht an Kinder unter 13. Wir erheben wissentlich keine Daten von Kindern.</p>
-<h2>Diese Website</h2>
-<p>hitscoop.com verwendet keine Cookies, hat keine Formulare und verfolgt keine Besucher.</p>
-<h2>Änderungen und Kontakt</h2>
-<ul><li>Wenn sich diese Erklärung ändert, aktualisieren wir diese Seite und ihr Datum. Fragen: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Herausgeber: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Zuletzt aktualisiert: 20. November 2026</p>
+<p class="note">Der vollständige Text ist derzeit auf Englisch und Türkisch verfügbar. Hier eine Zusammenfassung, darunter der vollständige englische Text.</p>
+<p>Hitscoop hat kein eigenes Konto und keine Registrierung.</p>
+<ul>
+<li>Wir haben keine Server; dein Fortschritt, deine Scoop und Einstellungen werden auf diesem Gerät gespeichert. Wenn du Google Play Spiele / iCloud verbindest, liegt die Sicherung in diesem Konto (Google / iCloud).</li>
+<li>Das Spiel ist kostenlos und zeigt Werbung. Die Werbung kommt von Google AdMob; dafür können eine Internetverbindung und die Werbe-ID deines Geräts genutzt werden. In Europa wirst du separat um Werbe-Einwilligung gebeten; auf dem iPhone entscheidest du allein über die Tracking-Erlaubnis.</li>
+<li>Wenn du möchtest, kannst du im Shop Scoop-Pakete kaufen; die Zahlung wickelt Google Play / der App Store ab, deine Kartendaten erreichen uns nie. Vor dem Kauf wirst du gebeten, dein Google Play Spiele / iCloud-Konto zu verbinden; dein Fortschritt wird dort gesichert.</li>
+<li>Das Spiel ist ab 12 Jahren.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="fr" lang="fr">
 <h1>Confidentialité</h1>
-<p class="date">Dernière mise à jour : 14 novembre 2026</p>
-<p>Hitscoop est un jeu de Swiff Studio. Cette page explique simplement quelles informations le jeu utilise.</p>
-<h2>En bref</h2>
-<ul><li>Pas de compte, pas d'inscription : le jeu ne demande jamais ton nom, ton e-mail ni ta photo.</li><li>Nous n'avons aucun serveur et ne collectons nous-mêmes aucune donnée personnelle.</li><li>Le jeu est gratuit et affiche des publicités fournies par Google AdMob.</li></ul>
-<h2>Ce qui reste sur ton appareil</h2>
-<p>Ta progression, tes étoiles, tes Scoops, tes glaces spéciales et tes réglages sont enregistrés uniquement sur ton appareil. Supprimer le jeu les supprime aussi.</p>
-<h2>Publicités</h2>
-<ul><li>Les publicités sont affichées par Google AdMob. Pour diffuser et mesurer les annonces et prévenir la fraude, Google peut utiliser l'identifiant publicitaire de ton appareil, ton adresse IP, des informations sur l'appareil et l'application et tes interactions avec les annonces. En savoir plus : <a href="https://policies.google.com/technologies/partner-sites">Comment Google utilise les informations des applications qui utilisent ses services</a>.</li><li>Si tu te trouves dans l'Espace économique européen, au Royaume-Uni ou en Suisse, le jeu te demande ton consentement via le formulaire de Google. Tu peux modifier ton choix à tout moment dans Réglages → Autorisations publicitaires.</li><li>Sur iPhone et iPad, le jeu demande l'autorisation de suivi. Si tu la refuses, tu verras quand même des publicités, simplement moins personnalisées.</li></ul>
-<h2>Achats</h2>
-<p>Il n'y a aucun achat en argent réel dans le jeu. Les Scoops se gagnent en jouant, avec le cadeau quotidien ou en choisissant de regarder une publicité.</p>
-<h2>Enfants</h2>
-<p>Hitscoop est destiné aux 12 ans et plus et ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations sur les enfants.</p>
-<h2>Ce site web</h2>
-<p>hitscoop.com n'utilise aucun cookie, ne contient aucun formulaire et ne suit pas ses visiteurs.</p>
-<h2>Modifications et contact</h2>
-<ul><li>Si cette politique change, nous mettons à jour cette page et sa date. Questions : <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Éditeur: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Dernière mise à jour : 20 novembre 2026</p>
+<p class="note">Le texte complet est actuellement disponible en anglais et en turc. Voici un résumé, suivi du texte complet en anglais.</p>
+<p>Hitscoop n'a ni compte propre ni inscription.</p>
+<ul>
+<li>Nous n'avons aucun serveur ; ta progression, tes Scoop et tes réglages sont stockés sur cet appareil. Si tu connectes Google Play Jeux / iCloud, la sauvegarde est conservée dans ce compte (Google / iCloud).</li>
+<li>Le jeu est gratuit et affiche des publicités. Elles sont fournies par Google AdMob, qui peut utiliser une connexion internet et l'identifiant publicitaire de ton appareil. En Europe, ton consentement publicitaire est demandé séparément ; sur iPhone, l'autorisation de suivi dépend entièrement de toi.</li>
+<li>Si tu le souhaites, tu peux acheter des packs de Scoop dans la boutique ; Google Play / l'App Store encaisse le paiement et tes données de carte ne nous parviennent jamais. Avant l'achat, on te demandera de connecter ton compte Google Play Jeux / iCloud ; ta progression y est sauvegardée.</li>
+<li>Le jeu est destiné aux 12 ans et plus.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="es" lang="es">
 <h1>Privacidad</h1>
-<p class="date">Última actualización: 14 de noviembre de 2026</p>
-<p>Hitscoop es un juego de Swiff Studio. Esta página explica de forma clara qué información usa el juego.</p>
-<h2>En resumen</h2>
-<ul><li>Sin cuenta ni registro: el juego nunca te pide tu nombre, correo ni foto.</li><li>No tenemos servidores y no recopilamos ningún dato personal.</li><li>El juego es gratis y muestra anuncios de Google AdMob.</li></ul>
-<h2>Lo que se queda en tu dispositivo</h2>
-<p>Tu progreso, estrellas, Scoops, helados especiales y ajustes se guardan solo en tu dispositivo. Si borras el juego, también se borran.</p>
-<h2>Anuncios</h2>
-<ul><li>Los anuncios los muestra Google AdMob. Para mostrar y medir anuncios y evitar fraudes, Google puede usar el identificador de publicidad de tu dispositivo, tu dirección IP, información del dispositivo y de la app y tu interacción con los anuncios. Más información: <a href="https://policies.google.com/technologies/partner-sites">Cómo usa Google la información de las apps que utilizan sus servicios</a>.</li><li>Si estás en el Espacio Económico Europeo, el Reino Unido o Suiza, el juego te pide el consentimiento con el formulario de Google. Puedes cambiar tu elección cuando quieras en Ajustes → Permisos de anuncios.</li><li>En iPhone y iPad, el juego pide permiso de seguimiento. Si no lo das, seguirás viendo anuncios, solo que menos personalizados.</li></ul>
-<h2>Compras</h2>
-<p>No hay compras con dinero real en el juego. Los Scoops se ganan jugando, con el regalo diario o viendo un anuncio si quieres.</p>
-<h2>Niños</h2>
-<p>Hitscoop es para mayores de 12 años y no está dirigido a menores de 13. No recopilamos a sabiendas información de niños.</p>
-<h2>Este sitio web</h2>
-<p>hitscoop.com no usa cookies, no tiene formularios y no rastrea a los visitantes.</p>
-<h2>Cambios y contacto</h2>
-<ul><li>Si esta política cambia, actualizamos esta página y su fecha. Preguntas: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Editor: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Última actualización: 20 de noviembre de 2026</p>
+<p class="note">El texto completo está disponible por ahora en inglés y turco. Aquí tienes un resumen y, debajo, el texto completo en inglés.</p>
+<p>Hitscoop no tiene cuenta propia ni registro.</p>
+<ul>
+<li>No tenemos servidores; tu progreso, tus Scoop y tus ajustes se guardan en este dispositivo. Si conectas Google Play Juegos / iCloud, la copia se guarda en esa cuenta tuya (Google / iCloud).</li>
+<li>El juego es gratis y muestra anuncios. Los anuncios los sirve Google AdMob, que puede usar una conexión a internet y el ID de publicidad de tu dispositivo. Si estás en Europa, se te pedirá aparte el consentimiento publicitario; en iPhone, el permiso de seguimiento depende solo de ti.</li>
+<li>Si quieres, puedes comprar paquetes de Scoop en la tienda; el pago lo gestiona Google Play / App Store y los datos de tu tarjeta nunca nos llegan. Antes de comprar te pediremos conectar tu cuenta de Google Play Juegos / iCloud; tu progreso se guarda en ella.</li>
+<li>El juego es para mayores de 12 años.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="pt" lang="pt">
 <h1>Privacidade</h1>
-<p class="date">Última atualização: 14 de novembro de 2026</p>
-<p>Hitscoop é um jogo da Swiff Studio. Esta página explica de forma clara quais informações o jogo usa.</p>
-<h2>Em resumo</h2>
-<ul><li>Sem conta e sem cadastro: o jogo nunca pede seu nome, e-mail ou foto.</li><li>Não temos servidores e não coletamos nenhum dado pessoal.</li><li>O jogo é gratuito e exibe anúncios do Google AdMob.</li></ul>
-<h2>O que fica no seu aparelho</h2>
-<p>Seu progresso, estrelas, Scoops, sorvetes especiais e configurações ficam salvos apenas no seu aparelho. Se você apagar o jogo, eles também são apagados.</p>
-<h2>Anúncios</h2>
-<ul><li>Os anúncios são exibidos pelo Google AdMob. Para exibir e medir anúncios e evitar fraudes, o Google pode usar o ID de publicidade do seu aparelho, seu endereço IP, informações do aparelho e do app e suas interações com os anúncios. Saiba mais: <a href="https://policies.google.com/technologies/partner-sites">Como o Google usa informações de apps que utilizam seus serviços</a>.</li><li>Se você estiver no Espaço Econômico Europeu, no Reino Unido ou na Suíça, o jogo pede seu consentimento pelo formulário do Google. Você pode mudar sua escolha a qualquer momento em Configurações → Permissões de anúncios.</li><li>No iPhone e no iPad, o jogo pede permissão de rastreamento. Se você não permitir, ainda verá anúncios, só que menos personalizados.</li></ul>
-<h2>Compras</h2>
-<p>Não há compras com dinheiro real no jogo. Os Scoops são ganhos jogando, com o presente diário ou assistindo a um anúncio, se você quiser.</p>
-<h2>Crianças</h2>
-<p>Hitscoop é para maiores de 12 anos e não é direcionado a menores de 13. Não coletamos intencionalmente informações de crianças.</p>
-<h2>Este site</h2>
-<p>hitscoop.com não usa cookies, não tem formulários e não rastreia visitantes.</p>
-<h2>Alterações e contato</h2>
-<ul><li>Se esta política mudar, atualizamos esta página e sua data. Dúvidas: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Editora: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Última atualização: 20 de novembro de 2026</p>
+<p class="note">O texto completo está disponível no momento em inglês e turco. Veja um resumo e, abaixo, o texto completo em inglês.</p>
+<p>O Hitscoop não tem conta própria nem cadastro.</p>
+<ul>
+<li>Não temos servidores; seu progresso, seus Scoop e configurações ficam neste dispositivo. Se você conectar o Google Play Games / iCloud, o backup fica nessa sua conta (Google / iCloud).</li>
+<li>O jogo é gratuito e exibe anúncios. Eles são fornecidos pelo Google AdMob, que pode usar uma conexão com a internet e o ID de publicidade do seu aparelho. Na Europa, o consentimento para anúncios é pedido à parte; no iPhone, a permissão de rastreamento é decisão sua.</li>
+<li>Se quiser, você pode comprar pacotes de Scoop na loja; o pagamento é feito pelo Google Play / App Store e os dados do seu cartão nunca chegam até nós. Antes de comprar, vamos pedir para conectar sua conta Google Play Games / iCloud; seu progresso é salvo nela.</li>
+<li>O jogo é para maiores de 12 anos.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="it" lang="it">
 <h1>Privacy</h1>
-<p class="date">Ultimo aggiornamento: 14 novembre 2026</p>
-<p>Hitscoop è un gioco di Swiff Studio. Questa pagina spiega in modo semplice quali informazioni usa il gioco.</p>
-<h2>In breve</h2>
-<ul><li>Nessun account, nessuna registrazione: il gioco non chiede mai nome, email o foto.</li><li>Non abbiamo server e non raccogliamo direttamente alcun dato personale.</li><li>Il gioco è gratuito e mostra pubblicità di Google AdMob.</li></ul>
-<h2>Cosa resta sul tuo dispositivo</h2>
-<p>Progressi, stelle, Scoop, gelati speciali e impostazioni sono salvati solo sul tuo dispositivo. Se elimini il gioco, vengono eliminati anche loro.</p>
-<h2>Pubblicità</h2>
-<ul><li>Gli annunci sono mostrati da Google AdMob. Per mostrare e misurare gli annunci e prevenire le frodi, Google può usare l'ID pubblicitario del dispositivo, l'indirizzo IP, informazioni su dispositivo e app e le tue interazioni con gli annunci. Per saperne di più: <a href="https://policies.google.com/technologies/partner-sites">Come Google utilizza le informazioni delle app che usano i suoi servizi</a>.</li><li>Se ti trovi nello Spazio economico europeo, nel Regno Unito o in Svizzera, il gioco chiede il tuo consenso con il modulo di Google. Puoi cambiare la tua scelta in qualsiasi momento in Impostazioni → Permessi pubblicitari.</li><li>Su iPhone e iPad il gioco chiede il permesso di tracciamento. Se non lo concedi, vedrai comunque annunci, solo meno personalizzati.</li></ul>
-<h2>Acquisti</h2>
-<p>Nel gioco non ci sono acquisti con denaro reale. Gli Scoop si guadagnano giocando, con il regalo giornaliero o guardando un annuncio, se vuoi.</p>
-<h2>Bambini</h2>
-<p>Hitscoop è pensato per chi ha almeno 12 anni e non è rivolto ai minori di 13 anni. Non raccogliamo consapevolmente informazioni sui bambini.</p>
-<h2>Questo sito</h2>
-<p>hitscoop.com non usa cookie, non ha moduli e non traccia i visitatori.</p>
-<h2>Modifiche e contatti</h2>
-<ul><li>Se questa informativa cambia, aggiorniamo questa pagina e la sua data. Domande: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Editore: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Ultimo aggiornamento: 20 novembre 2026</p>
+<p class="note">Il testo completo è al momento disponibile in inglese e in turco. Ecco un riassunto, seguito dal testo completo in inglese.</p>
+<p>Hitscoop non ha un account proprio né registrazione.</p>
+<ul>
+<li>Non abbiamo server; i tuoi progressi, gli Scoop e le impostazioni sono salvati su questo dispositivo. Se colleghi Google Play Giochi / iCloud, il backup resta in quel tuo account (Google / iCloud).</li>
+<li>Il gioco è gratuito e mostra pubblicità. Gli annunci sono forniti da Google AdMob, che può usare una connessione internet e l'ID pubblicitario del dispositivo. In Europa il consenso pubblicitario viene chiesto a parte; su iPhone il permesso di tracciamento è una tua scelta.</li>
+<li>Se vuoi, puoi acquistare pacchetti di Scoop nel negozio; il pagamento è gestito da Google Play / App Store e i dati della tua carta non ci arrivano mai. Prima dell'acquisto ti verrà chiesto di collegare l'account Google Play Giochi / iCloud; i tuoi progressi vengono salvati lì.</li>
+<li>Il gioco è per chi ha almeno 12 anni.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="nl" lang="nl">
 <h1>Privacy</h1>
-<p class="date">Laatst bijgewerkt: 14 november 2026</p>
-<p>Hitscoop is een spel van Swiff Studio. Deze pagina legt duidelijk uit welke informatie het spel gebruikt.</p>
-<h2>Kort gezegd</h2>
-<ul><li>Geen account, geen registratie: het spel vraagt nooit om je naam, e-mail of foto.</li><li>We hebben geen servers en verzamelen zelf geen persoonsgegevens.</li><li>Het spel is gratis en toont advertenties van Google AdMob.</li></ul>
-<h2>Wat op je apparaat blijft</h2>
-<p>Je voortgang, sterren, Scoops, speciale ijsjes en instellingen worden alleen op je apparaat bewaard. Verwijder je het spel, dan worden ze ook verwijderd.</p>
-<h2>Advertenties</h2>
-<ul><li>Advertenties worden getoond door Google AdMob. Om advertenties te tonen en te meten en fraude te voorkomen, kan Google de advertentie-ID van je apparaat, je IP-adres, apparaat- en app-informatie en je interacties met advertenties gebruiken. Meer info: <a href="https://policies.google.com/technologies/partner-sites">Hoe Google informatie gebruikt van apps die zijn diensten gebruiken</a>.</li><li>Ben je in de Europese Economische Ruimte, het VK of Zwitserland, dan vraagt het spel om toestemming via het formulier van Google. Je kunt je keuze altijd wijzigen via Instellingen → Advertentietoestemming.</li><li>Op iPhone en iPad vraagt het spel om toestemming voor tracking. Geef je die niet, dan zie je nog steeds advertenties, alleen minder gepersonaliseerd.</li></ul>
-<h2>Aankopen</h2>
-<p>Er zijn geen aankopen met echt geld in het spel. Scoops verdien je door te spelen, met het dagelijkse cadeau of als je zelf kiest een advertentie te bekijken.</p>
-<h2>Kinderen</h2>
-<p>Hitscoop is bedoeld voor 12 jaar en ouder en is niet gericht op kinderen jonger dan 13. We verzamelen niet bewust gegevens van kinderen.</p>
-<h2>Deze website</h2>
-<p>hitscoop.com gebruikt geen cookies, heeft geen formulieren en volgt geen bezoekers.</p>
-<h2>Wijzigingen en contact</h2>
-<ul><li>Als dit beleid verandert, werken we deze pagina en de datum bij. Vragen: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Uitgever: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Laatst bijgewerkt: 20 november 2026</p>
+<p class="note">De volledige tekst is momenteel beschikbaar in het Engels en Turks. Hieronder een samenvatting en daaronder de volledige Engelse tekst.</p>
+<p>Hitscoop heeft geen eigen account of registratie.</p>
+<ul>
+<li>We hebben geen servers; je voortgang, Scoop en instellingen worden op dit apparaat bewaard. Als je Google Play Games / iCloud verbindt, staat de back-up in dat account van jou (Google / iCloud).</li>
+<li>Het spel is gratis en toont advertenties. Die komen van Google AdMob, dat een internetverbinding en de advertentie-ID van je apparaat kan gebruiken. In Europa wordt apart om toestemming voor advertenties gevraagd; op de iPhone beslis jij zelf over toestemming voor tracking.</li>
+<li>Als je wilt, kun je in de winkel Scoop-pakketten kopen; de betaling loopt via Google Play / de App Store en je kaartgegevens komen nooit bij ons. Vóór het kopen vragen we je je Google Play Games / iCloud-account te verbinden; je voortgang wordt daar bewaard.</li>
+<li>Het spel is voor 12 jaar en ouder.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="pl" lang="pl">
 <h1>Prywatność</h1>
-<p class="date">Ostatnia aktualizacja: 14 listopada 2026</p>
-<p>Hitscoop to gra Swiff Studio. Ta strona jasno wyjaśnia, jakich informacji używa gra.</p>
-<h2>W skrócie</h2>
-<ul><li>Bez konta i rejestracji: gra nigdy nie pyta o imię, e-mail ani zdjęcie.</li><li>Nie mamy serwerów i sami nie zbieramy żadnych danych osobowych.</li><li>Gra jest darmowa i wyświetla reklamy Google AdMob.</li></ul>
-<h2>Co zostaje na twoim urządzeniu</h2>
-<p>Postępy, gwiazdki, Scoopy, specjalne lody i ustawienia są zapisywane tylko na twoim urządzeniu. Usunięcie gry usuwa także je.</p>
-<h2>Reklamy</h2>
-<ul><li>Reklamy wyświetla Google AdMob. Aby wyświetlać i mierzyć reklamy oraz zapobiegać oszustwom, Google może używać identyfikatora reklamowego urządzenia, adresu IP, informacji o urządzeniu i aplikacji oraz twoich interakcji z reklamami. Więcej: <a href="https://policies.google.com/technologies/partner-sites">Jak Google wykorzystuje informacje z aplikacji korzystających z jego usług</a>.</li><li>Jeśli jesteś w Europejskim Obszarze Gospodarczym, Wielkiej Brytanii lub Szwajcarii, gra prosi o zgodę za pomocą formularza Google. Możesz zmienić wybór w dowolnej chwili w Ustawienia → Zgody reklamowe.</li><li>Na iPhonie i iPadzie gra prosi o zgodę na śledzenie. Jeśli jej nie udzielisz, nadal zobaczysz reklamy, tylko mniej spersonalizowane.</li></ul>
-<h2>Zakupy</h2>
-<p>W grze nie ma zakupów za prawdziwe pieniądze. Scoopy zdobywasz, grając, dzięki codziennemu prezentowi albo oglądając reklamę, jeśli chcesz.</p>
-<h2>Dzieci</h2>
-<p>Hitscoop jest przeznaczony dla osób w wieku 12+ i nie jest skierowany do dzieci poniżej 13 lat. Świadomie nie zbieramy informacji o dzieciach.</p>
-<h2>Ta strona</h2>
-<p>hitscoop.com nie używa plików cookie, nie ma formularzy i nie śledzi odwiedzających.</p>
-<h2>Zmiany i kontakt</h2>
-<ul><li>Jeśli ta polityka się zmieni, zaktualizujemy tę stronę i jej datę. Pytania: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Wydawca: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Ostatnia aktualizacja: 20 listopada 2026</p>
+<p class="note">Pełny tekst jest obecnie dostępny po angielsku i turecku. Poniżej podsumowanie, a pod nim pełny tekst po angielsku.</p>
+<p>Hitscoop nie ma własnego konta ani rejestracji.</p>
+<ul>
+<li>Nie mamy serwerów; postęp, Scoop i ustawienia są zapisywane na tym urządzeniu. Jeśli połączysz Gry Google Play / iCloud, kopia jest przechowywana na tym Twoim koncie (Google / iCloud).</li>
+<li>Gra jest darmowa i wyświetla reklamy. Dostarcza je Google AdMob, który może korzystać z połączenia z internetem i identyfikatora reklamowego urządzenia. W Europie zgoda na reklamy jest wymagana osobno; na iPhonie zgoda na śledzenie zależy wyłącznie od ciebie.</li>
+<li>Jeśli chcesz, możesz kupić pakiety Scoop w sklepie; płatność obsługuje Google Play / App Store, a dane Twojej karty nigdy do nas nie trafiają. Przed zakupem poprosimy o połączenie konta Gry Google Play / iCloud; tam zapisuje się Twój postęp.</li>
+<li>Gra jest przeznaczona dla osób w wieku 12+.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="ro" lang="ro">
 <h1>Confidențialitate</h1>
-<p class="date">Ultima actualizare: 14 noiembrie 2026</p>
-<p>Hitscoop este un joc Swiff Studio. Această pagină explică pe înțeles ce informații folosește jocul.</p>
-<h2>Pe scurt</h2>
-<ul><li>Fără cont, fără înregistrare: jocul nu îți cere niciodată numele, e-mailul sau o fotografie.</li><li>Nu avem servere și nu colectăm noi înșine date personale.</li><li>Jocul este gratuit și afișează reclame Google AdMob.</li></ul>
-<h2>Ce rămâne pe dispozitivul tău</h2>
-<p>Progresul, stelele, Scoop-urile, înghețatele speciale și setările sunt salvate doar pe dispozitivul tău. Dacă ștergi jocul, se șterg și ele.</p>
-<h2>Reclame</h2>
-<ul><li>Reclamele sunt afișate de Google AdMob. Pentru a afișa și măsura reclamele și a preveni fraudele, Google poate folosi ID-ul de publicitate al dispozitivului, adresa IP, informații despre dispozitiv și aplicație și interacțiunile tale cu reclamele. Află mai multe: <a href="https://policies.google.com/technologies/partner-sites">Cum folosește Google informațiile din aplicațiile care îi folosesc serviciile</a>.</li><li>Dacă te afli în Spațiul Economic European, Regatul Unit sau Elveția, jocul îți cere acordul prin formularul Google. Îți poți schimba alegerea oricând din Setări → Permisiuni reclame.</li><li>Pe iPhone și iPad, jocul cere permisiunea de urmărire. Dacă nu o acorzi, vei vedea în continuare reclame, doar mai puțin personalizate.</li></ul>
-<h2>Cumpărături</h2>
-<p>Jocul nu are cumpărături cu bani reali. Scoop-urile se câștigă jucând, cu cadoul zilnic sau urmărind o reclamă, dacă vrei.</p>
-<h2>Copii</h2>
-<p>Hitscoop este pentru vârsta de 12 ani și peste și nu se adresează copiilor sub 13 ani. Nu colectăm în mod intenționat informații de la copii.</p>
-<h2>Acest site</h2>
-<p>hitscoop.com nu folosește cookie-uri, nu are formulare și nu urmărește vizitatorii.</p>
-<h2>Modificări și contact</h2>
-<ul><li>Dacă această politică se schimbă, actualizăm pagina și data ei. Întrebări: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Editor: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Ultima actualizare: 20 noiembrie 2026</p>
+<p class="note">Textul complet este disponibil momentan în engleză și turcă. Mai jos găsești un rezumat, urmat de textul complet în engleză.</p>
+<p>Hitscoop nu are cont propriu sau înregistrare.</p>
+<ul>
+<li>Nu avem servere; progresul, Scoop-urile și setările tale sunt stocate pe acest dispozitiv. Dacă conectezi Google Play Jocuri / iCloud, copia de rezervă e păstrată în acel cont al tău (Google / iCloud).</li>
+<li>Jocul este gratuit și afișează reclame. Reclamele sunt furnizate de Google AdMob, care poate folosi conexiunea la internet și ID-ul de publicitate al dispozitivului. În Europa ți se cere separat acordul pentru reclame; pe iPhone, permisiunea de urmărire este decizia ta.</li>
+<li>Dacă vrei, poți cumpăra pachete de Scoop din magazin; plata o preia Google Play / App Store, iar datele cardului tău nu ajung niciodată la noi. Înainte de cumpărare ți se va cere să conectezi contul Google Play Jocuri / iCloud; progresul tău e salvat acolo.</li>
+<li>Jocul este pentru vârsta de 12 ani și peste.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="sq" lang="sq">
 <h1>Privatësia</h1>
-<p class="date">Përditësuar më: 14 nëntor 2026</p>
-<p>Hitscoop është një lojë e Swiff Studio. Kjo faqe shpjegon qartë cilat të dhëna përdor loja.</p>
-<h2>Shkurt</h2>
-<ul><li>Pa llogari, pa regjistrim: loja nuk të kërkon kurrë emrin, emailin apo foton.</li><li>Nuk kemi serverë dhe nuk mbledhim vetë asnjë të dhënë personale.</li><li>Loja është falas dhe shfaq reklama nga Google AdMob.</li></ul>
-<h2>Çfarë mbetet në pajisjen tënde</h2>
-<p>Përparimi, yjet, Scoop-et, akulloret speciale dhe cilësimet ruhen vetëm në pajisjen tënde. Nëse e fshin lojën, fshihen edhe ato.</p>
-<h2>Reklamat</h2>
-<ul><li>Reklamat shfaqen nga Google AdMob. Për të shfaqur dhe matur reklamat dhe për të parandaluar mashtrimet, Google mund të përdorë ID-në e reklamave të pajisjes, adresën IP, informacione për pajisjen dhe aplikacionin dhe ndërveprimet e tua me reklamat. Më shumë: <a href="https://policies.google.com/technologies/partner-sites">Si i përdor Google informacionet nga aplikacionet që përdorin shërbimet e tij</a>.</li><li>Nëse je në Zonën Ekonomike Evropiane, Mbretërinë e Bashkuar ose Zvicër, loja të kërkon pëlqimin me formularin e Google. Mund ta ndryshosh zgjedhjen kur të duash te Cilësimet → Lejet e reklamave.</li><li>Në iPhone dhe iPad loja kërkon leje për gjurmim. Nëse nuk e jep, do të shohësh prapë reklama, thjesht më pak të personalizuara.</li></ul>
-<h2>Blerjet</h2>
-<p>Loja nuk ka blerje me para të vërteta. Scoop-et fitohen duke luajtur, me dhuratën ditore ose duke parë një reklamë, nëse do.</p>
-<h2>Fëmijët</h2>
-<p>Hitscoop është për moshat 12 vjeç e lart dhe nuk u drejtohet fëmijëve nën 13 vjeç. Nuk mbledhim me dije të dhëna nga fëmijët.</p>
-<h2>Kjo faqe interneti</h2>
-<p>hitscoop.com nuk përdor cookies, nuk ka formularë dhe nuk gjurmon vizitorët.</p>
-<h2>Ndryshimet dhe kontakti</h2>
-<ul><li>Nëse kjo politikë ndryshon, e përditësojmë këtë faqe dhe datën e saj. Pyetje: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Botuesi: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Përditësuar më: 20 nëntor 2026</p>
+<p class="note">Teksti i plotë për momentin është në anglisht dhe turqisht. Më poshtë gjen një përmbledhje dhe pas saj tekstin e plotë në anglisht.</p>
+<p>Hitscoop nuk ka llogari apo regjistrim të vetin.</p>
+<ul>
+<li>Ne nuk kemi serverë; progresi, Scoop-et dhe cilësimet ruhen në këtë pajisje. Nëse lidh Google Play Lojëra / iCloud, kopja rezervë ruhet në atë llogarinë tënde (Google / iCloud).</li>
+<li>Loja është falas dhe shfaq reklama. Reklamat i ofron Google AdMob, i cili mund të përdorë lidhjen me internetin dhe ID-në e reklamave të pajisjes. Në Evropë pëlqimi për reklamat kërkohet veçmas; në iPhone leja e gjurmimit është tërësisht vendimi yt.</li>
+<li>Nëse dëshiron, mund të blesh paketa Scoop në dyqan; pagesën e merr Google Play / App Store dhe të dhënat e kartës sate nuk na vijnë kurrë. Para blerjes do të të kërkohet të lidhësh llogarinë Google Play Lojëra / iCloud; progresi yt ruhet aty.</li>
+<li>Loja është për moshat 12 vjeç e lart.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="id" lang="id">
 <h1>Privasi</h1>
-<p class="date">Terakhir diperbarui: 14 November 2026</p>
-<p>Hitscoop adalah game dari Swiff Studio. Halaman ini menjelaskan dengan jelas informasi apa yang digunakan game ini.</p>
-<h2>Singkatnya</h2>
-<ul><li>Tanpa akun, tanpa pendaftaran: game ini tidak pernah meminta nama, email, atau fotomu.</li><li>Kami tidak punya server dan tidak mengumpulkan data pribadi apa pun.</li><li>Game ini gratis dan menampilkan iklan dari Google AdMob.</li></ul>
-<h2>Yang tetap di perangkatmu</h2>
-<p>Progres, bintang, Scoop, es krim spesial, dan pengaturanmu hanya disimpan di perangkatmu. Jika game dihapus, semuanya ikut terhapus.</p>
-<h2>Iklan</h2>
-<ul><li>Iklan ditampilkan oleh Google AdMob. Untuk menampilkan dan mengukur iklan serta mencegah penipuan, Google dapat menggunakan ID iklan perangkatmu, alamat IP, informasi perangkat dan aplikasi, serta interaksimu dengan iklan. Selengkapnya: <a href="https://policies.google.com/technologies/partner-sites">Cara Google menggunakan informasi dari aplikasi yang memakai layanannya</a>.</li><li>Jika kamu berada di Wilayah Ekonomi Eropa, Inggris, atau Swiss, game ini meminta persetujuanmu lewat formulir Google. Kamu bisa mengubah pilihanmu kapan saja di Pengaturan → Izin Iklan.</li><li>Di iPhone dan iPad, game ini meminta izin pelacakan. Jika tidak kamu izinkan, kamu tetap melihat iklan, hanya kurang dipersonalisasi.</li></ul>
-<h2>Pembelian</h2>
-<p>Tidak ada pembelian dengan uang sungguhan di game ini. Scoop didapat dengan bermain, hadiah harian, atau menonton iklan jika kamu mau.</p>
-<h2>Anak-anak</h2>
-<p>Hitscoop ditujukan untuk usia 12 tahun ke atas dan tidak ditujukan untuk anak di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan informasi dari anak-anak.</p>
-<h2>Situs web ini</h2>
-<p>hitscoop.com tidak memakai cookie, tidak punya formulir, dan tidak melacak pengunjung.</p>
-<h2>Perubahan dan kontak</h2>
-<ul><li>Jika kebijakan ini berubah, kami memperbarui halaman ini dan tanggalnya. Pertanyaan: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Penerbit: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Terakhir diperbarui: 20 November 2026</p>
+<p class="note">Teks lengkap saat ini tersedia dalam bahasa Inggris dan Turki. Berikut ringkasannya, lalu teks lengkap dalam bahasa Inggris.</p>
+<p>Hitscoop tidak punya akun atau pendaftaran tersendiri.</p>
+<ul>
+<li>Kami tidak punya server; progres, Scoop, dan pengaturanmu disimpan di perangkat ini. Jika kamu menghubungkan Google Play Game / iCloud, cadangannya disimpan di akunmu itu (Google / iCloud).</li>
+<li>Game ini gratis dan menampilkan iklan. Iklan disediakan oleh Google AdMob, yang dapat memakai koneksi internet dan ID iklan perangkatmu. Jika kamu di Eropa, persetujuan iklan diminta terpisah; di iPhone, izin pelacakan sepenuhnya keputusanmu.</li>
+<li>Jika mau, kamu bisa membeli paket Scoop di toko; pembayaran diproses oleh Google Play / App Store dan data kartumu tidak pernah sampai ke kami. Sebelum membeli kamu akan diminta menghubungkan akun Google Play Game / iCloud; progresmu dicadangkan di sana.</li>
+<li>Game ini untuk usia 12 tahun ke atas.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="ru" lang="ru">
 <h1>Конфиденциальность</h1>
-<p class="date">Последнее обновление: 14 ноября 2026 г.</p>
-<p>Hitscoop — игра Swiff Studio. На этой странице просто объясняется, какую информацию использует игра.</p>
-<h2>Коротко</h2>
-<ul><li>Без аккаунта и регистрации: игра никогда не спрашивает имя, e-mail или фото.</li><li>У нас нет серверов, и сами мы не собираем никаких персональных данных.</li><li>Игра бесплатная и показывает рекламу Google AdMob.</li></ul>
-<h2>Что остаётся на устройстве</h2>
-<p>Прогресс, звёзды, Scoop, особое мороженое и настройки хранятся только на твоём устройстве. Если удалить игру, они тоже удалятся.</p>
-<h2>Реклама</h2>
-<ul><li>Рекламу показывает Google AdMob. Чтобы показывать и измерять рекламу и предотвращать мошенничество, Google может использовать рекламный идентификатор устройства, IP-адрес, сведения об устройстве и приложении и твои взаимодействия с рекламой. Подробнее: <a href="https://policies.google.com/technologies/partner-sites">Как Google использует информацию из приложений, работающих с его сервисами</a>.</li><li>Если ты находишься в Европейской экономической зоне, Великобритании или Швейцарии, игра запросит согласие через форму Google. Изменить выбор можно в любой момент: Настройки → Разрешения рекламы.</li><li>На iPhone и iPad игра запрашивает разрешение на отслеживание. Если не разрешить, реклама всё равно будет показываться, просто менее персонализированная.</li></ul>
-<h2>Покупки</h2>
-<p>В игре нет покупок за реальные деньги. Scoop зарабатываются игрой, ежедневным подарком или просмотром рекламы по желанию.</p>
-<h2>Дети</h2>
-<p>Hitscoop предназначен для лиц от 12 лет и не ориентирован на детей младше 13 лет. Мы сознательно не собираем информацию о детях.</p>
-<h2>Этот сайт</h2>
-<p>hitscoop.com не использует cookie, не содержит форм и не отслеживает посетителей.</p>
-<h2>Изменения и контакты</h2>
-<ul><li>Если политика изменится, мы обновим эту страницу и дату. Вопросы: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Издатель: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Последнее обновление: 20 ноября 2026 г.</p>
+<p class="note">Полный текст пока доступен на английском и турецком языках. Ниже — краткое изложение и полный текст на английском.</p>
+<p>В Hitscoop нет отдельного аккаунта или регистрации.</p>
+<ul>
+<li>У нас нет серверов; прогресс, Scoop и настройки хранятся на этом устройстве. Если подключить Google Play Игры / iCloud, резервная копия хранится в этом вашем аккаунте (Google / iCloud).</li>
+<li>Игра бесплатная и показывает рекламу. Рекламу предоставляет Google AdMob, который может использовать интернет-соединение и рекламный идентификатор устройства. В Европе согласие на рекламу запрашивается отдельно; на iPhone разрешение на отслеживание — полностью твой выбор.</li>
+<li>При желании можно купить наборы Scoop в магазине; оплату принимает Google Play / App Store, данные вашей карты к нам не попадают. Перед покупкой мы попросим подключить аккаунт Google Play Игры / iCloud; прогресс сохраняется в нём.</li>
+<li>Игра предназначена для лиц от 12 лет.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="uk" lang="uk">
 <h1>Конфіденційність</h1>
-<p class="date">Останнє оновлення: 14 листопада 2026 р.</p>
-<p>Hitscoop — гра від Swiff Studio. На цій сторінці просто пояснено, яку інформацію використовує гра.</p>
-<h2>Коротко</h2>
-<ul><li>Без облікового запису й реєстрації: гра ніколи не питає ім'я, e-mail чи фото.</li><li>У нас немає серверів, і ми самі не збираємо жодних персональних даних.</li><li>Гра безкоштовна й показує рекламу Google AdMob.</li></ul>
-<h2>Що залишається на пристрої</h2>
-<p>Прогрес, зірки, Scoop, особливе морозиво й налаштування зберігаються лише на твоєму пристрої. Якщо видалити гру, вони теж видаляться.</p>
-<h2>Реклама</h2>
-<ul><li>Рекламу показує Google AdMob. Щоб показувати й вимірювати рекламу та запобігати шахрайству, Google може використовувати рекламний ідентифікатор пристрою, IP-адресу, відомості про пристрій і застосунок та твою взаємодію з рекламою. Докладніше: <a href="https://policies.google.com/technologies/partner-sites">Як Google використовує інформацію із застосунків, що працюють з його сервісами</a>.</li><li>Якщо ти в Європейській економічній зоні, Великій Британії чи Швейцарії, гра попросить згоду через форму Google. Змінити вибір можна будь-коли: Налаштування → Дозволи реклами.</li><li>На iPhone та iPad гра запитує дозвіл на відстеження. Якщо не дозволити, реклама все одно буде, просто менш персоналізована.</li></ul>
-<h2>Покупки</h2>
-<p>У грі немає покупок за реальні гроші. Scoop заробляються грою, щоденним подарунком або переглядом реклами за бажанням.</p>
-<h2>Діти</h2>
-<p>Hitscoop призначено для віку від 12 років; гра не орієнтована на дітей до 13 років. Ми свідомо не збираємо інформацію про дітей.</p>
-<h2>Цей сайт</h2>
-<p>hitscoop.com не використовує cookie, не має форм і не відстежує відвідувачів.</p>
-<h2>Зміни та контакти</h2>
-<ul><li>Якщо політика зміниться, ми оновимо цю сторінку та дату. Питання: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>Видавець: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">Останнє оновлення: 20 листопада 2026 р.</p>
+<p class="note">Повний текст поки доступний англійською та турецькою мовами. Нижче — короткий виклад і повний текст англійською.</p>
+<p>У Hitscoop немає окремого облікового запису чи реєстрації.</p>
+<ul>
+<li>У нас немає серверів; прогрес, Scoop і налаштування зберігаються на цьому пристрої. Якщо підключити Ігри Google Play / iCloud, резервна копія зберігається у цьому вашому обліковому записі (Google / iCloud).</li>
+<li>Гра безкоштовна й показує рекламу. Рекламу надає Google AdMob, який може використовувати інтернет-з'єднання та рекламний ідентифікатор пристрою. У Європі згоду на рекламу запитують окремо; на iPhone дозвіл на відстеження — повністю твій вибір.</li>
+<li>За бажання можна купити набори Scoop у магазині; оплату приймає Google Play / App Store, дані вашої картки до нас не потрапляють. Перед покупкою ми попросимо підключити обліковий запис Ігри Google Play / iCloud; прогрес зберігається в ньому.</li>
+<li>Гра призначена для віку від 12 років.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="ja" lang="ja">
 <h1>プライバシー</h1>
-<p class="date">最終更新日：2026年11月14日</p>
-<p>Hitscoop は Swiff Studio のゲームです。このページでは、ゲームが使う情報をわかりやすく説明します。</p>
-<h2>要点</h2>
-<ul><li>アカウントも登録も不要：名前、メールアドレス、写真を求めることはありません。</li><li>私たちはサーバーを持たず、個人情報を自ら収集することはありません。</li><li>ゲームは無料で、Google AdMob の広告が表示されます。</li></ul>
-<h2>端末に保存されるもの</h2>
-<p>進行状況、スター、Scoop、特別なアイス、設定はあなたの端末にだけ保存されます。ゲームを削除すると、これらも削除されます。</p>
-<h2>広告</h2>
-<ul><li>広告は Google AdMob によって表示されます。広告の表示・測定や不正防止のため、Google は端末の広告ID、IPアドレス、端末やアプリの情報、広告への操作を利用することがあります。詳しくは：<a href="https://policies.google.com/technologies/partner-sites">Google のサービスを使用するアプリから収集した情報の Google による使用</a>。</li><li>欧州経済領域、英国、スイスにいる場合は、Google の同意フォームで広告への同意を確認します。設定 → 広告の許可 からいつでも変更できます。</li><li>iPhone・iPad ではトラッキングの許可を求めます。許可しなくても広告は表示されますが、パーソナライズの度合いが下がります。</li></ul>
-<h2>購入</h2>
-<p>ゲーム内に実際のお金での購入はありません。Scoop はプレイ、デイリーギフト、または希望すれば広告視聴で獲得できます。</p>
-<h2>お子さまについて</h2>
-<p>Hitscoop の対象年齢は12歳以上で、13歳未満の子どもを対象としていません。子どもの情報を故意に収集することはありません。</p>
-<h2>このウェブサイト</h2>
-<p>hitscoop.com は Cookie を使用せず、フォームもなく、訪問者を追跡しません。</p>
-<h2>変更とお問い合わせ</h2>
-<ul><li>本ポリシーを変更した場合は、このページと日付を更新します。お問い合わせ：<a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>発行元: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">最終更新日：2026年11月20日</p>
+<p class="note">全文は現在、英語とトルコ語でご覧いただけます。以下は要約と、英語の全文です。</p>
+<p>Hitscoop には独自のアカウントや登録はありません。</p>
+<ul>
+<li>当社はサーバーを持っていません。進行状況、Scoop、設定はこのデバイスに保存されます。Google Play ゲーム / iCloud に接続すると、バックアップはあなたのそのアカウント（Google / iCloud）に保存されます。</li>
+<li>ゲームは無料で、広告が表示されます。広告はGoogle AdMobが配信し、インターネット接続と端末の広告IDが使われることがあります。ヨーロッパでは広告の同意を別途確認します。iPhoneでのトラッキング許可は完全にあなたの判断です。</li>
+<li>ご希望ならストアで Scoop パックを購入できます。支払いは Google Play / App Store が行い、カード情報が当社に届くことはありません。購入前に Google Play ゲーム / iCloud アカウントへの接続をお願いします。進行状況はそのアカウントにバックアップされます。</li>
+<li>対象年齢は12歳以上です。</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="ko" lang="ko">
 <h1>개인정보 보호</h1>
-<p class="date">최종 업데이트: 2026년 11월 14일</p>
-<p>Hitscoop은 Swiff Studio의 게임입니다. 이 페이지는 게임이 어떤 정보를 사용하는지 쉽게 설명합니다.</p>
-<h2>요약</h2>
-<ul><li>계정도 가입도 없습니다. 게임은 이름, 이메일, 사진을 요구하지 않습니다.</li><li>저희는 서버가 없으며 직접 어떤 개인정보도 수집하지 않습니다.</li><li>게임은 무료이며 Google AdMob 광고가 표시됩니다.</li></ul>
-<h2>기기에 남는 정보</h2>
-<p>진행 상황, 별, Scoop, 특별 아이스크림, 설정은 기기에만 저장됩니다. 게임을 삭제하면 함께 삭제됩니다.</p>
-<h2>광고</h2>
-<ul><li>광고는 Google AdMob이 표시합니다. 광고 게재·측정과 부정행위 방지를 위해 Google은 기기의 광고 ID, IP 주소, 기기 및 앱 정보, 광고와의 상호작용을 사용할 수 있습니다. 자세히 보기: <a href="https://policies.google.com/technologies/partner-sites">Google 서비스를 사용하는 앱의 정보를 Google이 사용하는 방법</a>.</li><li>유럽 경제 지역, 영국 또는 스위스에 있다면 게임이 Google의 동의 양식으로 광고 동의를 묻습니다. 설정 → 광고 권한에서 언제든지 선택을 바꿀 수 있습니다.</li><li>iPhone과 iPad에서는 추적 허용을 요청합니다. 허용하지 않아도 광고는 표시되며, 다만 덜 맞춤화됩니다.</li></ul>
-<h2>구매</h2>
-<p>게임에는 실제 돈으로 하는 구매가 없습니다. Scoop은 플레이, 일일 선물 또는 원할 때 광고 시청으로 얻을 수 있습니다.</p>
-<h2>어린이</h2>
-<p>Hitscoop은 12세 이상을 위한 게임이며 13세 미만 어린이를 대상으로 하지 않습니다. 어린이의 정보를 고의로 수집하지 않습니다.</p>
-<h2>이 웹사이트</h2>
-<p>hitscoop.com은 쿠키를 사용하지 않고, 양식이 없으며, 방문자를 추적하지 않습니다.</p>
-<h2>변경 및 문의</h2>
-<ul><li>정책이 바뀌면 이 페이지와 날짜를 업데이트합니다. 문의: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>퍼블리셔: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">최종 업데이트: 2026년 11월 20일</p>
+<p class="note">전체 내용은 현재 영어와 터키어로 제공됩니다. 아래에 요약과 영어 전문이 있습니다.</p>
+<p>Hitscoop에는 별도의 계정이나 회원가입이 없어요.</p>
+<ul>
+<li>저희는 서버가 없어요. 진행 상황, Scoop, 설정은 이 기기에 저장돼요. Google Play 게임즈 / iCloud에 연결하면 백업은 회원님의 해당 계정(Google / iCloud)에 보관돼요.</li>
+<li>게임은 무료이며 광고가 표시됩니다. 광고는 Google AdMob이 제공하며, 인터넷 연결과 기기의 광고 ID를 사용할 수 있습니다. 유럽에서는 광고 동의를 따로 묻고, iPhone에서 추적 허용 여부는 전적으로 사용자의 선택입니다.</li>
+<li>원하면 상점에서 Scoop 팩을 구매할 수 있어요. 결제는 Google Play / App Store가 처리하며 카드 정보는 저희에게 전혀 전달되지 않아요. 구매 전에 Google Play 게임즈 / iCloud 계정 연결을 요청하며, 진행 상황은 그 계정에 백업돼요.</li>
+<li>12세 이상 이용 가능한 게임입니다.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 <article data-lang="zh" lang="zh">
 <h1>隐私</h1>
-<p class="date">最后更新：2026年11月14日</p>
-<p>Hitscoop 是 Swiff Studio 出品的游戏。本页面清楚说明游戏会使用哪些信息。</p>
-<h2>简而言之</h2>
-<ul><li>无需账号，无需注册：游戏从不要求你的姓名、邮箱或照片。</li><li>我们没有服务器，也不会自行收集任何个人信息。</li><li>游戏免费，并显示 Google AdMob 提供的广告。</li></ul>
-<h2>保存在你设备上的内容</h2>
-<p>你的进度、星星、Scoop、特殊冰淇淋和设置只保存在你的设备上。删除游戏后，这些内容也会被删除。</p>
-<h2>广告</h2>
-<ul><li>广告由 Google AdMob 展示。为了展示和衡量广告并防止欺诈，Google 可能会使用你设备的广告标识符、IP 地址、设备和应用信息以及你与广告的互动。了解更多：<a href="https://policies.google.com/technologies/partner-sites">Google 如何使用来自使用其服务的应用的信息</a>。</li><li>如果你位于欧洲经济区、英国或瑞士，游戏会通过 Google 的同意表单征求你的广告同意。你可以随时在 设置 → 广告权限 中更改选择。</li><li>在 iPhone 和 iPad 上，游戏会请求跟踪许可。如果你不允许，仍会看到广告，只是个性化程度较低。</li></ul>
-<h2>购买</h2>
-<p>游戏中没有真钱购买。Scoop 可通过游玩、每日礼物或自愿观看广告获得。</p>
-<h2>儿童</h2>
-<p>Hitscoop 适合 12 岁及以上玩家，不面向 13 岁以下儿童。我们不会故意收集儿童的信息。</p>
-<h2>本网站</h2>
-<p>hitscoop.com 不使用 Cookie，没有表单，也不跟踪访客。</p>
-<h2>变更与联系</h2>
-<ul><li>如本政策有变更，我们会更新本页面及日期。问题请联系：<a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>发行商: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">最后更新：2026年11月20日</p>
+<p class="note">完整文本目前提供英文和土耳其文版本。以下是摘要，其后为英文全文。</p>
+<p>Hitscoop 没有单独的账号或注册。</p>
+<ul>
+<li>我们没有服务器；你的进度、Scoop 和设置保存在此设备上。如果连接 Google Play 游戏 / iCloud，备份将保存在你的该账号中（Google / iCloud）。</li>
+<li>游戏免费并显示广告。广告由 Google AdMob 提供，可能会使用网络连接和设备的广告标识符。在欧洲会另行征求你的广告同意；在 iPhone 上是否允许跟踪完全由你决定。</li>
+<li>如果你愿意，可以在商店购买 Scoop 礼包；付款由 Google Play / App Store 处理，你的银行卡信息绝不会到达我们这里。购买前会请你连接 Google Play 游戏 / iCloud 账号；你的进度会备份到该账号。</li>
+<li>本游戏适合 12 岁及以上玩家。</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
-<article data-lang="ar" lang="ar" dir=rtl>
+<article data-lang="ar" lang="ar" dir="rtl">
 <h1>الخصوصية</h1>
-<p class="date">آخر تحديث: 14 نوفمبر 2026</p>
-<p>Hitscoop لعبة من Swiff Studio. توضّح هذه الصفحة ببساطة المعلومات التي تستخدمها اللعبة.</p>
-<h2>باختصار</h2>
-<ul><li>لا حساب ولا تسجيل: لا تطلب اللعبة اسمك أو بريدك الإلكتروني أو صورتك أبدًا.</li><li>ليس لدينا خوادم ولا نجمع بأنفسنا أي معلومات شخصية.</li><li>اللعبة مجانية وتعرض إعلانات من Google AdMob.</li></ul>
-<h2>ما يبقى على جهازك</h2>
-<p>تقدّمك ونجومك وScoop والآيس كريم الخاص والإعدادات تُحفظ على جهازك فقط. إذا حذفت اللعبة تُحذف معها.</p>
-<h2>الإعلانات</h2>
-<ul><li>تعرض Google AdMob الإعلانات. لعرض الإعلانات وقياسها ومنع الاحتيال، قد تستخدم Google معرّف الإعلانات في جهازك وعنوان IP ومعلومات الجهاز والتطبيق وتفاعلك مع الإعلانات. لمعرفة المزيد: <a href="https://policies.google.com/technologies/partner-sites">كيف تستخدم Google المعلومات من التطبيقات التي تستخدم خدماتها</a>.</li><li>إذا كنت في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، تطلب اللعبة موافقتك عبر نموذج Google. يمكنك تغيير اختيارك في أي وقت من الإعدادات ← أذونات الإعلانات.</li><li>على iPhone وiPad تطلب اللعبة إذن التتبّع. إذا لم تسمح، ستظل ترى الإعلانات لكنها ستكون أقل تخصيصًا.</li></ul>
-<h2>المشتريات</h2>
-<p>لا توجد في اللعبة مشتريات بأموال حقيقية. تُكسب Scoop باللعب أو بالهدية اليومية أو بمشاهدة إعلان إن أردت.</p>
-<h2>الأطفال</h2>
-<p>Hitscoop مخصّصة لمن هم في الثانية عشرة فما فوق وليست موجّهة للأطفال دون 13 عامًا. لا نجمع عن قصد أي معلومات من الأطفال.</p>
-<h2>هذا الموقع</h2>
-<p>لا يستخدم hitscoop.com ملفات تعريف الارتباط، ولا يحتوي على نماذج، ولا يتتبّع الزوار.</p>
-<h2>التغييرات والتواصل</h2>
-<ul><li>إذا تغيّرت هذه السياسة نحدّث هذه الصفحة وتاريخها. للأسئلة: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a></li><li>الناشر: Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</li></ul>
+<p class="date">آخر تحديث: 20 نوفمبر 2026</p>
+<p class="note">النص الكامل متاح حاليًا باللغتين الإنجليزية والتركية. فيما يلي ملخص، يليه النص الإنجليزي الكامل.</p>
+<p>لا يوجد في Hitscoop حساب خاص أو تسجيل.</p>
+<ul>
+<li>ليس لدينا خوادم؛ يُحفظ تقدّمك وScoop والإعدادات على هذا الجهاز. إذا ربطت ألعاب Google Play / iCloud تُحفظ النسخة الاحتياطية في حسابك ذاك (Google / iCloud).</li>
+<li>اللعبة مجانية وتعرض إعلانات تقدّمها Google AdMob، وقد تستخدم اتصال الإنترنت ومعرّف الإعلانات في جهازك. في أوروبا تُطلب موافقتك على الإعلانات بشكل منفصل؛ وعلى iPhone إذن التتبّع قرارك أنت بالكامل.</li>
+<li>يمكنك إن شئت شراء حزم Scoop من المتجر؛ يتولّى Google Play / App Store الدفع ولا تصلنا بيانات بطاقتك أبداً. قبل الشراء سنطلب منك ربط حساب ألعاب Google Play / iCloud؛ ويُحفظ تقدّمك فيه.</li>
+<li>اللعبة مخصّصة لمن هم في الثانية عشرة فما فوق.</li>
+</ul>
+<hr>
+<div lang="en" dir="ltr"><p>Hitscoop is a game by Swiff Studio. This page explains plainly what information the game uses. Controller: Swiff Agency Prodüksiyon Televizyon Sinema Sanayi Ticaret Ltd. Şti. (Swiff Studio), Esentepe Mah. Feza Sok. No: 8 İç Kapı No: 3, 34394 Şişli / Istanbul, Türkiye, <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li>Hitscoop has no separate account or sign-up; the game never asks for your name, email or photo.</li>
+<li>We have no servers; we do not collect or store personal data about you.</li>
+<li>The game is free and shows Google AdMob ads. If you like, you can buy Scoop packs; Apple or Google takes the payment.</li>
+</ul>
+<h2>2. What stays on your device</h2>
+<p>Your progress, stars, Scoop, special ice creams, settings, the names you type in Two Scoop and the transaction IDs of completed purchases (so the same payment is never granted twice) are stored only on your device. Deleting the app deletes them too.</p>
+<h2>3. Account connection and cloud backup</h2>
+<ul>
+<li>Before buying, or whenever you like from Settings, you connect your Google Play Games account on Android or your iCloud account on iPhone and iPad. No password or email reaches us; Google or Apple handles the sign-in.</li>
+<li>While connected, a copy of your save (progress, Scoop, items, settings) is stored in your account, in Google Play Games Saved Games or in iCloud. We cannot see this copy; Google and Apple process it under their own privacy rules.</li>
+<li>When you connect Google Play Games, Google lets the game know your player ID and player name; the game uses them on your device only to find your backup and does not send them to us.</li>
+<li>To delete the backup: on Android, delete Hitscoop data in Google Play Games settings; on iPhone, go to Settings → [your name] → iCloud → Manage Account Storage and delete Hitscoop.</li>
+</ul>
+<h2>4. Purchases</h2>
+<p>Payments for Scoop packs are handled by the Apple App Store or Google Play. Your card and payment details never reach us. The game only learns from the store which pack you bought and a transaction ID, and uses them on your device to deliver your Scoop and never grant the same payment twice. The stores keep your purchase history under their own rules.</p>
+<h2>5. Ads</h2>
+<ul>
+<li>Ads are shown by Google AdMob. To show and measure ads and to prevent fraud, Google may use your device's advertising identifier, IP address, device and app information and how you interact with ads. Learn more: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+<li>If you are in the European Economic Area, the UK or Switzerland, the game asks for your ad consent with Google's consent form; you can change your choice at any time in Settings → About → Ad Permissions.</li>
+<li>On iPhone and iPad the game asks for tracking permission. If you do not allow it, you will still see ads, just less personalised ones.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Hitscoop is meant for ages 12 and up and is not directed at children under 13. We do not knowingly collect information from children.</p>
+<h2>7. Your rights and contact</h2>
+<p>You have rights of access, correction, deletion and objection under the GDPR, Turkish KVKK and similar laws. Since we hold no personal data about you, most requests are met by deleting the data on your device (by deleting the app) and the cloud backup (with the steps above). For data held by Google and Apple, use their privacy centres. Questions and requests: <a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a>. You may also complain to the data protection authority in your country.</p>
+<h2>8. This website</h2>
+<p>hitscoop.com uses no cookies, has no forms and does not track visitors. As with any web request, the host technically sees your IP address; we do not collect or use it.</p>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and its date, and we announce important changes in the game.</p></div>
+<p class="contact"><a href="mailto:info@swiff.com.tr">info@swiff.com.tr</a> · Swiff Studio — SWIFF AGENCY PRODÜKSİYON TELEVİZYON SİNEMA SANAYİ TİCARET LİMİTED ŞİRKETİ, Şişli, İstanbul, Türkiye</p>
 </article>
 </div></div></main>
 <footer class="f"><div class="w">
